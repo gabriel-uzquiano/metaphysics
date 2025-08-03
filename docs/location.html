@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Temporal Location – Time</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./persistence.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./location.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Temporal Location</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Time</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tense.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Tense and Ontology</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./persistence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Persistence and Change</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./location.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Temporal Location</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#mereology" id="toc-mereology" class="nav-link active" data-scroll-target="#mereology"><span class="header-section-number">3.1</span> Mereology</a>
+  <ul>
+  <li><a href="#core-mereology" id="toc-core-mereology" class="nav-link" data-scroll-target="#core-mereology"><span class="header-section-number">3.1.1</span> Core Mereology</a></li>
+  <li><a href="#extensional-mereology" id="toc-extensional-mereology" class="nav-link" data-scroll-target="#extensional-mereology"><span class="header-section-number">3.1.2</span> Extensional Mereology</a></li>
+  <li><a href="#classical-extensional-mereology" id="toc-classical-extensional-mereology" class="nav-link" data-scroll-target="#classical-extensional-mereology"><span class="header-section-number">3.1.3</span> Classical Extensional Mereology</a></li>
+  </ul></li>
+  <li><a href="#theories-of-location" id="toc-theories-of-location" class="nav-link" data-scroll-target="#theories-of-location"><span class="header-section-number">3.2</span> Theories of Location</a>
+  <ul>
+  <li><a href="#four-locative-relations" id="toc-four-locative-relations" class="nav-link" data-scroll-target="#four-locative-relations"><span class="header-section-number">3.2.1</span> Four Locative Relations</a></li>
+  <li><a href="#two-theories-of-location" id="toc-two-theories-of-location" class="nav-link" data-scroll-target="#two-theories-of-location"><span class="header-section-number">3.2.2</span> Two Theories of Location</a></li>
+  <li><a href="#endurance-revisited" id="toc-endurance-revisited" class="nav-link" data-scroll-target="#endurance-revisited"><span class="header-section-number">3.2.3</span> Endurance Revisited</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Temporal Location</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The debate over persistence has suffered from a certain amount of imprecision. We initially explained that to persist is to be <em>found</em>, to be <em>present</em>, and even to <em>exist</em> at more than one time. And we explained that to be <em>present</em> at a time is not the same as being <em>entirely present</em> at the time. Philosophers often use locational vocabulary such as ‘occupies a region’ or ‘exactly occupies a region’ in subtly different ways, which may exacerbate the problem.</p>
+<p>Talk of temporal location may in fact interact with mereological talk of part and whole, e.g., as in the characterization of what is for something to be <em>wholly present</em> somewhere.</p>
+<p>In response to the problem of imprecission, <span class="citation" data-cites="Parsons2007-PARTOL-2">(<a href="references.html#ref-Parsons2007-PARTOL-2" role="doc-biblioref">Parsons 2007</a>)</span> outlined a formal framework for location, one in which one could characterize a family of locational relations in terms of each other and further mereological vocabulary.</p>
+<section id="mereology" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="mereology"><span class="header-section-number">3.1</span> Mereology</h2>
+<p>Mereology is the formal theory of the part to whole relation.</p>
+<p>There is a primitive binary relation of part to whole, which we symbolize <span class="math inline">\(\leq\)</span>. We may now define other predicates in terms of part:</p>
+<ul>
+<li><span class="math inline">\(x\)</span> overlaps <span class="math inline">\(y\)</span>, symbolized <span class="math inline">\(x \circ y\)</span>, iff <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> have a common part <span class="math inline">\(z\)</span>, that is, <span class="math inline">\(z \leq x\)</span> and <span class="math inline">\(z \leq y\)</span>.</li>
+<li><span class="math inline">\(x\)</span> is a <em>fusion</em> of a set of objects <span class="math inline">\(S\)</span> iff each and every member <span class="math inline">\(y\)</span> of <span class="math inline">\(S\)</span> is part of <span class="math inline">\(x\)</span>, and each and every part of <span class="math inline">\(x\)</span> overlaps some member of <span class="math inline">\(S\)</span>.</li>
+</ul>
+<p>Most axiomatizations of mereology agree on a common core of three axioms to the effect that the relation of part to whole is a partial order of the domain. Reflexivity makes sure that every object is part of itself; anti-symmetry bars different objects from being mutual parts; and transitivity states that if an object is part of another, and the second part of a third, then the first is part of the third.</p>
+<section id="core-mereology" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="core-mereology"><span class="header-section-number">3.1.1</span> Core Mereology</h3>
+<p><span class="math display">\[
+\begin{align}
+x \leq x &amp; &amp; \text{Reflexivity}\\
+x \leq y \wedge y \leq x \to x = y &amp; &amp; \text{Anti-Symmetry}\\
+x \leq y \wedge y \leq z \to x \leq z &amp; &amp; \text{Transitivity}
+\end{align}
+\]</span></p>
+<p>One may question whether the axioms apply to material objects, e.g., one may take the statue and the clay of which it is made to be part of one another without being identical. On the other hand, core mereology seems beyond doubt when it comes to spatial, temporal, and, more generally, spatiotemporal regions.</p>
+<p>One more axiom concerns the question of how a whole may decompose into further proper parts. If one object is not part of another, then the latter has some part with no parts in common with the former. If a statue, for example, is not part of its torso, then it includes some part, e.g., its head, with no parts in common with its torso. One important consequence of the axiom is the extensionality of overlap and proper part, respectively: two objects are identical if they overlap exactly the same objects, and two objects are identical if they share all of their proper parts.</p>
+</section>
+<section id="extensional-mereology" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="extensional-mereology"><span class="header-section-number">3.1.2</span> Extensional Mereology</h3>
+<p>Extensional mereology is the axiomatization that results when we enrich Core Mereology with an axiom of Strong Supplementation:</p>
+<p><span class="math display">\[
+\begin{align}
+x \nleq y \to \exists z (z \leq x \wedge \neg z \circ y) &amp; &amp; \text{Strong Supplementation}
+\end{align}
+\]</span></p>
+<p>The axiom has been called into question when it comes to material objects. Some philosophers deny that the statue is part of the clay of which it is made, yet they deny that the clay has parts that are disjoint of the statue since they are after all made out of the same matter.</p>
+<p>On the other hand, the axiom seems reasonable for spatial, temporal, and even spatiotemporal regions. Consider the spatial case. If <span class="math inline">\(r\)</span> is a spatial region and <span class="math inline">\(s\)</span> is <em>not</em> a subregion of <span class="math inline">\(r\)</span>, then <span class="math inline">\(s\)</span> must include a subregion that does not overlap <span class="math inline">\(r\)</span>. If you conceive of regions as sets of points, then a region is part of another iff the latter contains each and every point in the former. But if <span class="math inline">\(s\)</span> is not part of <span class="math inline">\(r\)</span>, then <span class="math inline">\(s\)</span> must include points that are not in <span class="math inline">\(r\)</span>, and a set of such points should itself count as a part of <span class="math inline">\(s\)</span>, which fails to overlap <span class="math inline">\(r\)</span>.</p>
+<p>Even more problematic is the axiom of Fusion according to which every set has a mereological fusion by which we mean a fusion which includes as parts all members of the set and only objects which overlap some member of the set.</p>
+</section>
+<section id="classical-extensional-mereology" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="classical-extensional-mereology"><span class="header-section-number">3.1.3</span> Classical Extensional Mereology</h3>
+<p>Classical Extensional Mereology is the axiomatization that results from Extensional Mereology when we add the axiom of fusion:</p>
+<p><span class="math display">\[
+\begin{align}
+S \neq \emptyset \to \exists x (\forall y (y \in S \to y \leq x) \wedge \forall y(y \leq x \to \exists z (y \circ z \wedge z \in S)) &amp; &amp; \text{Fusion}\\
+\end{align}
+\]</span></p>
+<p>Fusion has been controversial, for one may doubt that every set, no matter how heterogeneous, gives rise to a whole whose parts are exactly those that overlap the members of the set. But when combined with the axioms of Extensional Mereology, we find that not only do such fusions exist, but they are unique too.</p>
+<p>While <span class="citation" data-cites="Lewis1986-LEWOTP-3">(<a href="references.html#ref-Lewis1986-LEWOTP-3" role="doc-biblioref">Lewis 1986</a>)</span> takes the axioms of Classical Extensional Mereology to be akin to logic, others have rejected them for material objects. Fewer have questioned the truth of the axioms for spatial, temporal, and spatiotemporal regions, but for present purposes, we will make do with the assumption that locations, whether spatial or temporal, are governed by the axioms of Extensional Mereology.</p>
+</section>
+</section>
+<section id="theories-of-location" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="theories-of-location"><span class="header-section-number">3.2</span> Theories of Location</h2>
+<p>We now proceed to distinguish four basic relations, which will enable us to clarify what is meant by the claim that an occupant is <em>found</em> or <em>present</em> at a location and how to distinguish it from the claim that is is <em>entirely</em> or <em>exactly</em> found or present at that location.</p>
+<section id="four-locative-relations" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="four-locative-relations"><span class="header-section-number">3.2.1</span> Four Locative Relations</h3>
+<p><span class="citation" data-cites="Parsons2007-PARTOL-2">(<a href="references.html#ref-Parsons2007-PARTOL-2" role="doc-biblioref">Parsons 2007</a>)</span> makes a distinction between four relations, which we illustrate by means of the diagram found in <span class="citation" data-cites="sep-location-mereology">(<a href="references.html#ref-sep-location-mereology" role="doc-biblioref">Gilmore, Calosi, and Costa 2024</a>)</span>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://plato.stanford.edu/archives/fall2018/entries/location-mereology/index-fig1.png" class="img-fluid figure-img"></p>
+<figcaption>Here <span class="math inline">\(d\)</span> is a material object; <span class="math inline">\(r_1\)</span> and <span class="math inline">\(r_5\)</span> are two pentagonal regions; <span class="math inline">\(r_2\)</span> is a triangular region; <span class="math inline">\(r_4\)</span> is a circular region; and, finally, <span class="math inline">\(r_4\)</span> is a rectangular region.</figcaption>
+</figure>
+</div>
+<ul>
+<li><p><strong>Weak location</strong></p>
+<p>I’m weakly located in the room simply because the room is not <em>free of</em> me. I will remain weakly located in the room if step through the threshold even if some of me remains in the room.</p>
+<p>We will write:</p>
+<ul>
+<li><span class="math inline">\(o\)</span> is <em>weakly located</em> at <span class="math inline">\(r\)</span>, in symbols: <span class="math inline">\(o @_\circ r\)</span>.</li>
+</ul>
+<p>In the diagram above:</p>
+<ul>
+<li><p><span class="math inline">\(d\)</span> is weakly located at <span class="math inline">\(r_2\)</span>, <span class="math inline">\(r_3\)</span>, <span class="math inline">\(r_4\)</span>, and <span class="math inline">\(r_5\)</span>.</p></li>
+<li><p><span class="math inline">\(d\)</span> is not weakly located at <span class="math inline">\(r_1\)</span>.</p></li>
+</ul>
+<p>We have used a spatial example, but weak location is what we have in mind when we say that something is <em>found</em> or <em>present</em> at a time or a temporal interval.</p></li>
+<li><p><strong>Entire location</strong></p>
+<p>I’m entirely located in the room because I’m in the room and I am nowhere outside the room. I will no longer be entirely located in the room if I step through the threshold even if some of me remains in the room.</p>
+<p>We will write:</p>
+<ul>
+<li><span class="math inline">\(o\)</span> is <em>entirely located</em> at <span class="math inline">\(r\)</span>, in symbols: <span class="math inline">\(o @_&lt; r\)</span></li>
+</ul>
+<p>In the diagram:</p>
+<ul>
+<li><p><span class="math inline">\(d\)</span> is entirely located at <span class="math inline">\(r_1\)</span> and <span class="math inline">\(r_4\)</span>.</p></li>
+<li><p><span class="math inline">\(d\)</span> is not entirely located at <span class="math inline">\(r_1\)</span> or <span class="math inline">\(r_2\)</span>.</p></li>
+</ul>
+<p>In the case of time, entire location is what we mean when we say that something is <em>entirely found</em> or <em>entirely present</em> at a time or temporal interval.</p></li>
+<li><p><strong>Pervasive Location</strong></p>
+<p>I pervade a region if none of it is free of me. I do not pervade the room, but I pervade the region exactly occupied by my hand.</p>
+<p>We will write:</p>
+<ul>
+<li><span class="math inline">\(o\)</span> <em>pervades</em> at <span class="math inline">\(r\)</span>, in symbols: <span class="math inline">\(o @_&gt; r\)</span></li>
+</ul>
+<p>In the diagram:</p>
+<ul>
+<li><p><span class="math inline">\(d\)</span> pervades both <span class="math inline">\(r_4\)</span> and <span class="math inline">\(r_5\)</span>.</p></li>
+<li><p><span class="math inline">\(d\)</span> does not pervade <span class="math inline">\(r_1\)</span>, <span class="math inline">\(r_2\)</span>, or <span class="math inline">\(r_3\)</span>.</p></li>
+</ul></li>
+<li><p><strong>Perfect Location</strong></p>
+<p>I’m perfectly located at a region if I am entirely located in the region and I pervade the region. My perfect location in space is like the shadow I cast in space.</p>
+<p>We will write:</p>
+<ul>
+<li><span class="math inline">\(o\)</span> is exactly located at <span class="math inline">\(r\)</span>, in symbols: <span class="math inline">\(o @_= r\)</span>.</li>
+</ul>
+<p>In the diagram:</p>
+<ul>
+<li><p><span class="math inline">\(d\)</span> is exactly located at <span class="math inline">\(r_3\)</span>.</p></li>
+<li><p><span class="math inline">\(d\)</span> is exactly located at <span class="math inline">\(r_1\)</span>, <span class="math inline">\(r_2\)</span>, <span class="math inline">\(r_4\)</span>, or <span class="math inline">\(r_5\)</span>.</p></li>
+</ul></li>
+</ul>
+<p>This is one place where we depart from <span class="citation" data-cites="Parsons2007-PARTOL-2">(<a href="references.html#ref-Parsons2007-PARTOL-2" role="doc-biblioref">Parsons 2007</a>)</span>, who uses the term ‘exact location’ to refer to what we have called perfect location.</p>
+</section>
+<section id="two-theories-of-location" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="two-theories-of-location"><span class="header-section-number">3.2.2</span> Two Theories of Location</h3>
+<p>There is no reason to take all four relations as basic. We may instead take one relation as basic and define the other three in terms of it in combination with other fundamental principles.</p>
+<p><strong>Weak Location</strong></p>
+<p>One approach is to take <em>weak location</em> as basic and defines the other three in terms of it:</p>
+<ul>
+<li><p><span class="math inline">\(o\)</span> is <em>entirely located</em> at <span class="math inline">\(r\)</span> if, and only if, <span class="math inline">\(o\)</span> is weakly located at <span class="math inline">\(r\)</span> and <span class="math inline">\(o\)</span> is only weakly located at regions <span class="math inline">\(r\)</span> overlaps. <span class="math display">\[
+o @_&lt; r := o @_\circ r \wedge \forall s (o @_\circ s \to r \circ s)
+\]</span></p></li>
+<li><p><span class="math inline">\(o\)</span> <em>pervades</em> <span class="math inline">\(r\)</span> if, and only if, <span class="math inline">\(o\)</span> is weakly located at each and every region <span class="math inline">\(r\)</span> overlaps. <span class="math display">\[
+o @_&gt; r := \forall s (r \circ s \to o @_\circ s)
+\]</span></p></li>
+<li><p><span class="math inline">\(o\)</span> is <em>perfectly located</em> at <span class="math inline">\(r\)</span> if, and only if, <span class="math inline">\(o\)</span> both pervades and is entirely located at <span class="math inline">\(r\)</span>. <span class="math display">\[
+o @_= r := o @_&gt; r \wedge o @_&lt; s
+\]</span> Or, equivalently: <span class="math display">\[
+o @_= r := \forall s (o @_\circ s \leftrightarrow r \circ s)
+\]</span></p></li>
+</ul>
+<p>There is a further axiom one must add by hand, namely, a principle to the effect that whatever is weakly located somewhere is in fact perfectly located somewhere (or somewhere else). This is what <span class="citation" data-cites="Parsons2007-PARTOL-2">(<a href="references.html#ref-Parsons2007-PARTOL-2" role="doc-biblioref">Parsons 2007</a>)</span> calls Exactness:</p>
+<p><span class="math display">\[
+\exists r \ x @_\circ r \to  \exists r \ x @_= r \tag{Exactness}
+\]</span></p>
+<p>One immediate consequence of the definitions above is that perfect location is unique if it exists. This in turn is a principle <span class="citation" data-cites="Parsons2007-PARTOL-2">(<a href="references.html#ref-Parsons2007-PARTOL-2" role="doc-biblioref">Parsons 2007</a>)</span> dubs Functionality:</p>
+<p><span class="math display">\[
+x @_= r_1 \wedge x @_= r_2 \to r_1 = r_2 \tag{Functionality}
+\]</span></p>
+<p><strong>Perfect Location</strong></p>
+<p>The other approach is to take perfect location as basic and define the other three relations in terms of it in combination with Functionality as a further axiom:</p>
+<ul>
+<li><p><span class="math inline">\(o\)</span> is <em>weakly located</em> at <span class="math inline">\(r\)</span> if, and only if, <span class="math inline">\(o\)</span> is perfectly located at some region <span class="math inline">\(r\)</span> overlaps: <span class="math display">\[
+o @_\circ r := \exists s (o @_= s \wedge r \circ s)
+\]</span></p></li>
+<li><p><span class="math inline">\(o\)</span> is <em>entirely located</em> at <span class="math inline">\(r\)</span> if, and only if, <span class="math inline">\(o\)</span> is perfectly located at a location of which <span class="math inline">\(r\)</span> is part. <span class="math display">\[
+o @_&lt; r := \exists s (o @_= s \wedge s \leq r)
+\]</span></p></li>
+<li><p><span class="math inline">\(o\)</span> <em>pervades</em> <span class="math inline">\(r\)</span> if, and only if, <span class="math inline">\(o\)</span> is exactly located at some part of <span class="math inline">\(r\)</span>. <span class="math display">\[
+o @_&gt; r := \exists s (o @_= s \wedge r \leq s)
+\]</span></p></li>
+</ul>
+<p>Exactness is a direct consequence of the definition of weak location in terms of perfect location, which means that there is no need to add it by hand as an axiom.</p>
+</section>
+<section id="endurance-revisited" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="endurance-revisited"><span class="header-section-number">3.2.3</span> Endurance Revisited</h3>
+<p>We will now distinguish two models of endurance and ask whether we have the resources to make sense of them.</p>
+<p><strong>Mereological Endurance</strong></p>
+<p>On one model of endurance, to persist is to be <em>wholly located</em> at every time at which one exists. One may now wonder how <em>whole location</em> is supposed to compare with the four relations we considered above.</p>
+<ul>
+<li><p><span class="math inline">\(o\)</span> is <em>wholly located</em> at <span class="math inline">\(r\)</span> if, and only if, every part of <span class="math inline">\(o\)</span> is weakly located at <span class="math inline">\(r\)</span>.</p>
+<p><span class="math display">\[
+o @_\blacktriangleleft r := \forall y (y \leq x \to y @_\circ r)
+\]</span></p></li>
+</ul>
+<p>While this relation may seem similar to <em>entire location</em>, they are not to be confused for reasons we have discussed before. For recall the diagram below drawn from <span class="citation" data-cites="sep-location-mereology">(<a href="references.html#ref-sep-location-mereology" role="doc-biblioref">Gilmore, Calosi, and Costa 2024</a>)</span>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://plato.stanford.edu/entries/location-mereology/figure05a.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="160"></p>
+</figure>
+</div>
+<p>Since <span class="math inline">\(o_1\)</span> is a simple object, it has only itself as a part. Because <span class="math inline">\(o_1\)</span> is weakly located at <span class="math inline">\(r_1\)</span> and no part of <span class="math inline">\(o_1\)</span> fails to be weakly located at <span class="math inline">\(r_1\)</span>, we conclude that <span class="math inline">\(o\)</span> is wholly located at <span class="math inline">\(r_1\)</span>. On the other hand, <span class="math inline">\(o_1\)</span> is <em>not</em> entirely located at <span class="math inline">\(r_1\)</span> simply because <span class="math inline">\(o_1\)</span> is weakly located somewhere outside <span class="math inline">\(r_1\)</span>, namely, <span class="math inline">\(r_3\)</span>. So, whole and entire location will come apart in the spatial case if there are spatially extended simples.</p>
+<p>Here is how one may use the definitions above to regiment endurance:</p>
+<ul>
+<li><span class="math inline">\(x\)</span> <em>endures</em> if and only if <span class="math inline">\(\exists t \exists r (\neg t \circ r \wedge x @_\blacktriangleleft t \wedge x @_\blacktriangleleft r)\)</span></li>
+</ul>
+<p>This definition allows for mixed cases in which a continuant endures by being wholly located only at some of the times at which it exists. To rule that out, we may say that an object endures throughout if it is wholly located at every time at which it exists.</p>
+<ul>
+<li><span class="math inline">\(x\)</span> <em>endures throughout</em> if and only if <span class="math inline">\(x\)</span> persists and <span class="math inline">\(\forall t(x@_\circ t \to x @_\blacktriangleleft t)\)</span>.</li>
+</ul>
+<p>The model of endurance that emerges is that of a temporally extended simple as illustrated by the picture drawn from <span class="citation" data-cites="sep-location-mereology">(<a href="references.html#ref-sep-location-mereology" role="doc-biblioref">Gilmore, Calosi, and Costa 2024</a>)</span>:</p>
+<p><img src="images/index-fig7.png" class="img-fluid"></p>
+<p>Notice, incidentally, that <span class="citation" data-cites="Parsons2007-PARTOL-2">(<a href="references.html#ref-Parsons2007-PARTOL-2" role="doc-biblioref">Parsons 2007</a>)</span> has the means to offer an account of temporal parts in terms of the vocabulary of the framework:</p>
+<ul>
+<li><span class="math inline">\(x\)</span> is a temporal part of <span class="math inline">\(y\)</span> at <span class="math inline">\(T\)</span> if, and only if, <span class="math inline">\(x\)</span> is a fusion of the set of objects <span class="math inline">\(z\)</span> such that <span class="math inline">\(z \leq y\)</span> and <span class="math inline">\(z @_\blacktriangleleft T\)</span>.</li>
+</ul>
+<p>On this definition, if <span class="math inline">\(y\)</span> exists at <span class="math inline">\(T\)</span> but endures throughout, then <span class="math inline">\(y\)</span> is <em>the</em> temporal part of <span class="math inline">\(y\)</span> at <span class="math inline">\(T\)</span>. Alternatively, we could define:</p>
+<ul>
+<li><span class="math inline">\(x\)</span> is a <em>proper</em> temporal part of <span class="math inline">\(y\)</span> at <span class="math inline">\(T\)</span> if, and only if, <span class="math inline">\(x\)</span> is a fusion of the set of objects <span class="math inline">\(z\)</span> such that <span class="math inline">\(z \leq y\)</span> and <span class="math inline">\(z @_&lt; T\)</span>.</li>
+</ul>
+<p>On this definition, if <span class="math inline">\(y\)</span> exists at <span class="math inline">\(T\)</span> but endures throughout, then unless <span class="math inline">\(T\)</span> is the temporal path of <span class="math inline">\(y\)</span>, nothing is a proper temporal part of <span class="math inline">\(y\)</span> at <span class="math inline">\(T\)</span>.</p>
+<p><strong>Locational Endurance</strong></p>
+<p>We still seem to lack the resources to make sense of an alternative model of endurance, one on which the occupant is <em>multilocated</em> by which proponents mean <em>exactly located at many different moments</em>. Here is how Cody Gilmore glosses the model in <span class="citation" data-cites="Gilmore2014-GILBMO">(<a href="references.html#ref-Gilmore2014-GILBMO" role="doc-biblioref">Gilmore 2014</a>)</span>:</p>
+<blockquote class="blockquote">
+<p>At least some material objects persist through time; and every material object is temporally unextended and wholly present at each instant at which it exists at all. Moreover, it is not the case that every material object has a different instantaneous temporal part at each different instant at which it exists.</p>
+</blockquote>
+<p>And this is how Parsons describes what he takes to be a misguided reaction to his own characterization of endurance in <span class="citation" data-cites="Parsons2007-PARTOL-2">(<a href="references.html#ref-Parsons2007-PARTOL-2" role="doc-biblioref">Parsons 2007</a>)</span> , p.&nbsp;218:</p>
+<blockquote class="blockquote">
+<p>According to these people, an enduring object is not one that is wholly located at each of many disjoint times, but one that is exactly located at each of many disjoint times.</p>
+</blockquote>
+<p>To make the model vivid, consider again the diagram from <span class="citation" data-cites="sep-location-mereology">(<a href="references.html#ref-sep-location-mereology" role="doc-biblioref">Gilmore, Calosi, and Costa 2024</a>)</span>:</p>
+<p><img src="images/l-endurance.png" class="img-fluid"></p>
+<p>The question now is how to make sense of the putative relation of <em>exact location</em> the occupant is supposed to bear to different times in the temporal path of the object. The occupant is <em>perfectly located</em> at the temporal path depicted by the diagram because it is, on the one hand, entirely, and, on the other, pervasively located in that temporal region.</p>
+<p><strong>How to Make Sense of Multilocation</strong></p>
+<p>One approach to the problem is to observe that there is no room for the distinction between the two models of endurance in the framework we have outlined. To return to the spatial case again, we want to draw a distinction between the case of an extended simple and a multilocated simple as illustrated by the diagram below drawn from <span class="citation" data-cites="sep-location-mereology">(<a href="references.html#ref-sep-location-mereology" role="doc-biblioref">Gilmore, Calosi, and Costa 2024</a>)</span>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 62%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Extended Simple</th>
+<th>Multilocated Simple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="https://plato.stanford.edu/entries/location-mereology/figure05a.svg" class="img-fluid" alt="Figure 5a diagram: link to extended description below" width="150"></td>
+<td><img src="https://plato.stanford.edu/entries/location-mereology/figure05b.svg" class="img-fluid" width="160"></td>
+</tr>
+</tbody>
+</table>
+<p>While <span class="math inline">\(o_1\)</span> is an extended simple, <span class="math inline">\(o_2\)</span> is a multilocated simple: <span class="math inline">\(o_2\)</span> is <em>exactly located</em> at <span class="math inline">\(r_3\)</span> and <span class="math inline">\(r_4\)</span>. This is the spatial counterpart of the contrast between the mereological and the locational model of endurance. The problem is that we lack the machinery to make sense of that distinction, since the patterns of exemplification of the part whole relation and that of weak location appears to be the same in both cases:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Extended Simple</th>
+<th>Multilocated Simple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(o_1 @_\circ r_1\)</span>, <span class="math inline">\(o_1 @_\circ r_2\)</span></td>
+<td><span class="math inline">\(o_2 @_\circ r_3\)</span>, <span class="math inline">\(o_2 @_\circ r_4\)</span></td>
+</tr>
+<tr class="even">
+<td><p><span class="math inline">\(x \leq o_1 \to x @_\circ r_1\)</span></p>
+<p><span class="math inline">\(x \leq o_1 \to x @_\circ r_2\)</span></p>
+<p>Etc</p></td>
+<td><p><span class="math inline">\(x \leq o_2 \to x @_\circ r_3\)</span></p>
+<p><span class="math inline">\(x \leq o_2 \to x @_\circ r_4\)</span></p>
+<p>Etc</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Free of</strong></p>
+<p>Weak location is elucidated in terms of the free of relation: for me to be weakly located in the room is for the room not to be free of me. <span class="citation" data-cites="Parsons2007-PARTOL-2">(<a href="references.html#ref-Parsons2007-PARTOL-2" role="doc-biblioref">Parsons 2007</a>)</span> conceives of the free of relation as a binary relation between a location and an occupant, but we may be able to do better if we take the free of relation as a perfectly general topic-neutral relation: <span class="math inline">\(\alpha\)</span> is free of <span class="math inline">\(\beta\)</span>, which we will symbolize <span class="math inline">\(\alpha \ \sharp \ \beta\)</span>. We use Greek variables as placeholders for variables over occupants and locations. For example:</p>
+<ul>
+<li><p>The room is not free of me. Nor am I free of the room.</p></li>
+<li><p>Neither the statue nor the clay is free of each other.</p></li>
+<li><p>My singleton is not free of me. Nor am I free of my singleton.</p></li>
+<li><p>Two adjacent regions are not free of each other.</p></li>
+</ul>
+<p>To be free of something is <em>not just</em> to …</p>
+<ul>
+<li><p>be numerically distinct from it</p>
+<p>The room and I are numerically distinct, yet we are not free of each other.</p></li>
+<li><p>to have no parts in common with it</p>
+<p>My singleton and I have no parts in common, yet we are not free of each other.</p></li>
+</ul>
+<p>We take the free of relation as basic and governed by three main axioms:</p>
+<p><span class="math display">\[
+\begin{align}
+\neg \alpha \ \# \ \alpha &amp; &amp; \text{Irreflexivity}\\
+\alpha \ \# \ \beta \to \beta \ \# \ \alpha &amp; &amp; \text{Symmetry}\\
+\alpha \leq \beta \to \forall \gamma(\neg \gamma \ \# \ \alpha \to \neg \gamma \ \# \ \beta) &amp; &amp; \text{Monotonicity}
+\end{align}
+\]</span></p>
+<p>More tentatively:</p>
+<p><span class="math display">\[
+\begin{align}
+\neg \gamma \ \# \ \alpha + \beta \to \neg \gamma \ \# \ \alpha \vee \neg \gamma \ \# \ \beta &amp; &amp; \text{Delegation}
+\end{align}
+\]</span></p>
+<p>One important consequence:</p>
+<ul>
+<li>If <span class="math inline">\(\alpha \ \# \ \beta\)</span>, then <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> have no parts in common.</li>
+</ul>
+<p>We do not generally have the converse:</p>
+<ul>
+<li><p>The room and I lack parts in common, yet we are not free of each other.</p></li>
+<li><p>My singleton and I lack parts in common, yet we are not free of each other.</p></li>
+</ul>
+<p>We do not even have the converse when we restrict attention to locations. In a region-based account of spatial regions:</p>
+<ul>
+<li>Two adjacent regions lack parts in common, yet they are not free of each other.</li>
+</ul>
+<p><strong>Weak Location</strong></p>
+<p>Weak location obtains between an occupant <span class="math inline">\(x\)</span> and a location <span class="math inline">\(R\)</span>.</p>
+<p>For <span class="math inline">\(x\)</span> to be <em>weakly located</em> at <span class="math inline">\(R\)</span>, <span class="math inline">\(x @_\circ R\)</span>, is for <span class="math inline">\(x\)</span> to not be free of <span class="math inline">\(R\)</span>. That is, <span class="math inline">\(x @_\circ R\)</span> if, and only if, <span class="math inline">\(\neg R \ \# \ x\)</span>.</p>
+<p>Monotonicity and Delegation deliver:</p>
+<p><span class="math display">\[
+\begin{align}
+x \leq y \to \forall R (x @_{\circ} R \to y @_{\circ} R) &amp; &amp; \text{Inheritance}\\
+R \leq S \to \forall x (x @_{\circ} R \to y @_{\circ} S) &amp; &amp; \text{Locational Inheritance}\\
+x @_\circ R_1 + R_2 \to x @_\circ R_1 \vee x @_\circ R_2 &amp; &amp; \text{Delegation}
+\end{align}
+\]</span></p>
+<p><strong>Weak Entire Location</strong></p>
+<p>We now define a relation of <em>weak entire location</em>:</p>
+<p><span class="math display">\[
+x@^{-}_&lt; R := x @_\circ R \wedge \forall S (x @_\circ S \to \neg R \ &nbsp;\sharp \&nbsp;S)
+\]</span></p>
+<p>That opens the way for a distinction between the cases we discussed above:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 61%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Extended Simple</th>
+<th>Multilocated Simple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://plato.stanford.edu/entries/location-mereology/figure05a.svg" class="img-fluid figure-img" width="150"></p>
+<figcaption>Figure 5a diagram: link to extended description below</figcaption>
+</figure>
+</div></td>
+<td><img src="https://plato.stanford.edu/entries/location-mereology/figure05b.svg" class="img-fluid" width="160"></td>
+</tr>
+</tbody>
+</table>
+<p>One could perhaps suggest that <span class="math inline">\(o_1\)</span> is weakly entirely located in <em>both</em> <span class="math inline">\(r_1\)</span> and <span class="math inline">\(r_2\)</span> partly because no region that overlaps <span class="math inline">\(r_2\)</span> is free of <span class="math inline">\(r_1\)</span> and vice versa. On the other hand, <span class="math inline">\(o_2\)</span> is not weakly entirely located in either <span class="math inline">\(r_3\)</span> or <span class="math inline">\(r_4\)</span> partly because the regions in question are free of each other.</p>
+<p><strong>Containment</strong></p>
+<p>In cases of multilocation, we may take the occupant to partly explain the link between the relevant locations. We write that <span class="math inline">\(x\)</span> is <em>contained</em> in <span class="math inline">\(R\)</span> if, and only if, <span class="math inline">\(x\)</span> is weakly located at <span class="math inline">\(S\)</span> and only regions that are not free of <span class="math inline">\(R\)</span> via <span class="math inline">\(x\)</span>.</p>
+<p><span class="math display">\[
+x@_\prec R := x @_\circ R \wedge \forall S (x @_\circ S \to \neg R \ &nbsp;\sharp_{x} \&nbsp;S)
+\]</span></p>
+<p>Part of the reason <span class="math inline">\(o_1\)</span> is contained in <span class="math inline">\(R_1\)</span> and <span class="math inline">\(R_2\)</span> is that is that they are not free of each other via <span class="math inline">\(o_1\)</span>, whereas <span class="math inline">\(R_3\)</span> and <span class="math inline">\(R_4\)</span> are free of each other via <span class="math inline">\(o_2\)</span>.</p>
+<p><strong>Perfect Containment</strong></p>
+<p>We are now in a position to define a relation of <em>perfect containment</em>, which <span class="math inline">\(o_1\)</span> bears to both <span class="math inline">\(R_1\)</span> and <span class="math inline">\(R_2\)</span> but <span class="math inline">\(o_2\)</span> only bears to <span class="math inline">\(R_3 + R_4\)</span>. We will write that <span class="math inline">\(x\)</span> is <em>perfectly contained</em> in <span class="math inline">\(R\)</span> if, and only if <span class="math inline">\(x\)</span> pervades <span class="math inline">\(R\)</span> and <span class="math inline">\(R\)</span> contains <span class="math inline">\(x\)</span>.</p>
+<p><span class="math display">\[
+x@_\approx R := x @_\prec R \wedge x @_&gt; R
+\]</span></p>
+<p>We now have the means to characterize locational endurance:</p>
+<ul>
+<li><span class="math inline">\(x\)</span> <em>endures</em> if and only if <span class="math inline">\(\exists t \exists r (\neg t \circ r \wedge x @_\approx t \wedge x @_\approx r)\)</span></li>
+</ul>
+<p>This definition allows for mixed cases in which a continuant endures by being perfectly contained only at some of the times at which it exists. To rule that out, we may say that an object endures throughout if it is perfectly contained in every time at which it exists.</p>
+<ul>
+<li><span class="math inline">\(x\)</span> <em>endures throughout</em> if and only if <span class="math inline">\(x\)</span> persists and <span class="math inline">\(\forall t(x@_\circ t \to x @_\approx t)\)</span>.</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Gilmore2014-GILBMO" class="csl-entry" role="listitem">
+Gilmore, Cody. 2014. <span>“Building Enduring Objects Out of Spacetime.”</span> In <em>Mereology and the Sciences: Parts and Wholes in the Contemporary Scientific Context</em>, edited by Claudio Calosi and Pierluigi Graziani, 5–34. Springer Verlag.
+</div>
+<div id="ref-sep-location-mereology" class="csl-entry" role="listitem">
+Gilmore, Cody, Claudio Calosi, and Damiano Costa. 2024. <span>“<span class="nocase">Location and Mereology</span>.”</span> In <em>The <span>Stanford</span> Encyclopedia of Philosophy</em>, edited by Edward N. Zalta and Uri Nodelman, <span>S</span>pring 2024. <a href="https://plato.stanford.edu/archives/spr2024/entries/location-mereology/" class="uri">https://plato.stanford.edu/archives/spr2024/entries/location-mereology/</a>; Metaphysics Research Lab, Stanford University.
+</div>
+<div id="ref-Lewis1986-LEWOTP-3" class="csl-entry" role="listitem">
+Lewis, David K. 1986. <em>On the Plurality of Worlds</em>. Malden, Mass.: Wiley-Blackwell.
+</div>
+<div id="ref-Parsons2007-PARTOL-2" class="csl-entry" role="listitem">
+Parsons, Josh. 2007. <span>“Theories of Location.”</span> In <em>Oxford Studies in Metaphysics:volume 3: Volume 3</em>, edited by Dean Zimmerman. Oxford University Press UK.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./persistence.html" class="pagination-link" aria-label="Persistence and Change">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Persistence and Change</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
