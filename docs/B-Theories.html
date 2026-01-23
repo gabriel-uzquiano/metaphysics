@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -69,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -315,8 +364,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-reduction-of-tense" id="toc-the-reduction-of-tense" class="nav-link active" data-scroll-target="#the-reduction-of-tense"><span class="header-section-number">4.1</span> The Reduction of Tense</a></li>
+  <li><a href="#now-indexicality" id="toc-now-indexicality" class="nav-link" data-scroll-target="#now-indexicality"><span class="header-section-number">4.2</span> Now, Indexicality</a></li>
+  <li><a href="#no-irreducible-tensed-facts" id="toc-no-irreducible-tensed-facts" class="nav-link" data-scroll-target="#no-irreducible-tensed-facts"><span class="header-section-number">4.3</span> No Irreducible Tensed Facts</a></li>
+  <li><a href="#against-temporal-passage" id="toc-against-temporal-passage" class="nav-link" data-scroll-target="#against-temporal-passage"><span class="header-section-number">4.4</span> Against Temporal Passage</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -340,8 +398,216 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>The B-Theory provides different answers to the questions on tense and ontology we isolated:</p>
+<ol type="1">
+<li>Are there objective differences between <em>past</em>, <em>present</em>, and <em>future</em>?</li>
+<li>Are present events and objects <em>more real</em> than past and future events and objects?</li>
+</ol>
+<p>The answer to the first question is negative. B-theorists compare the distinction between <em>past</em>, <em>present</em>, and <em>future</em> to the contrast between putative spatial determinations such as being <em>local</em> and being <em>elsewhere</em>. To be sure, a lecture at GFS108 may at a certain time strike us as a <em>local event,</em> whereas a session of Congress is <em>elsewhere</em>. What is less clear is that the distinction marks an objective difference between the two events, one, in particular, that is not just a matter of perspective. Whether a certain event or object counts as <em>local</em> or whether it lies <em>elsewhere</em> is just a matter of perspective and depends on your own location in space. For after all, what is local for some speakers may lie elsewhere for others and vice versa.</p>
+<p>That suggests an egalitarian attitude towards all spatially located events and objects. It would be a mistake to claim that <em>local</em> events and objects are in fact <em>more real</em> than events and objects located elsewhere. Kangaroos are no less real for the mere fact that they are not local but rather are located elsewhere in Australia. The proponent of the B-Theory claims that time is no different from space in these respects.</p>
+<p>The distinction between past, present, and future events and objects does not mark an objective distinction between them, one, in particular, that is not just a matter of perspective. Instead, whether an event or object counts as past, present, and future for you depends on your own location in spacetime. What is present for some speakers may in fact be past for others and vice versa.</p>
+<p>The B-theory recommends an egalitarian attitude towards all spatiotemporally located events and objects. The fact that some events and objects are located in the remote past or in the far future does not make them less real than events and objects with whom we happen to immediately interact.</p>
+<p>But while these answers are programmatic, they question remains of how to implement the view.</p>
+<section id="the-reduction-of-tense" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="the-reduction-of-tense"><span class="header-section-number">4.1</span> The Reduction of Tense</h2>
+<p>Let us return to McTaggart’s distinction between A- and B-facts. Unlike A-facts, B-facts concern the relative location of events with respect to one another and are <em>permanent</em>. These facts, as McTaggard characterized them, concern the relations <em>earlier than</em>, <em>simultaneous with</em> and <em>later than</em>. In contrast to them, A-facts are subject to change: events and objects are future, then they become near future. After they become present, they begin to recede into the near past and farther into the past. These facts are temporary. What is now future, will become present and the will recede into the past.</p>
+<p>One area of disagreement for A- and B-theorists is the question of whether A-facts are prior to (or ground) B-facts or whether instead B-facts are prior to (or ground) A-facts. The A-theory offers a reduction of B-facts to A-facts:</p>
+<table class="caption-top table">
+<caption>A-facts ground B-facts</caption>
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">B-facts</th>
+<th style="text-align: center;">A-facts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(m\)</span> is earlier than <span class="math inline">\(m'\)</span></td>
+<td style="text-align: center;"><p><span class="math inline">\(m\)</span> is now past and <span class="math inline">\(m'\)</span> is now present, or</p>
+<p><span class="math inline">\(m\)</span> is now present and <span class="math inline">\(m'\)</span> is now future, or</p>
+<p>etc</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(m\)</span> is later than <span class="math inline">\(m'\)</span></td>
+<td style="text-align: center;"><p><span class="math inline">\(m\)</span> is now present and <span class="math inline">\(m'\)</span> is now past, or</p>
+<p><span class="math inline">\(m\)</span> is now future and <span class="math inline">\(m'\)</span> is now present, or</p>
+<p>etc</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(m\)</span> is simultaneous with <span class="math inline">\(m'\)</span></td>
+<td style="text-align: center;"><p><span class="math inline">\(m\)</span> and <span class="math inline">\(m'\)</span> are now present, or</p>
+<p><span class="math inline">\(m\)</span> and <span class="math inline">\(m'\)</span> are now future but it will be the case that they are both present, or</p>
+<p><span class="math inline">\(m\)</span> and <span class="math inline">\(m'\)</span> are now past but it has been the case that they have both been present</p></td>
+</tr>
+</tbody>
+</table>
+<p>The B-Theory of time reverses the order of explanation. B-facts are prior to (and ground) A-facts, which depend on a given perspective.</p>
+<table class="caption-top table">
+<caption>B-facts ground A-facts</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">A-facts</th>
+<th style="text-align: center;">B-facts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(m\)</span> is future</td>
+<td style="text-align: center;"><span class="math inline">\(m\)</span> is later than <em>now</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(m\)</span> is present</td>
+<td style="text-align: center;"><span class="math inline">\(m\)</span> is <em>now</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(m\)</span> is past</td>
+<td style="text-align: center;"><span class="math inline">\(m\)</span> is later than <em>now</em></td>
+</tr>
+</tbody>
+</table>
+<p>In this respect, A-facts are not different from a family of perspectival facts expressed by utterances of covertly indexical sentences. Consider the distinction between:</p>
+<ul>
+<li><p>Joshua Tree is to the East.</p></li>
+<li><p>Santa Monica is to the West.</p></li>
+</ul>
+<p>To claim that Joshua Tree is to the West is to claim that Joshua Tree bears a certain spatial relation to the spatial coordinates of the speaker <em>at the time of utterance</em>. The utterance is true if made in Los Angeles, but false when made in Tucson, AZ.</p>
+<p>The B-Theorist may use the word <em>now</em> to single out the temporal coordinates of the speaker at the time of utterance of sentences that contain it. The sentence ‘<em>m</em> is later than <em>now</em>’ expresses different propositions in different contexts. A given context <span class="math inline">\(C\)</span> includes the time of utterance of the sentence, and the utterance expresses the fact that <em>m</em> is later than that time. More generally</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 22%">
+<col style="width: 48%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>sentence</strong></td>
+<td><strong>utterance</strong></td>
+<td><strong>proposition</strong></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(m\)</span> is later than <em>now</em></td>
+<td><p>… at a context <span class="math inline">\(C\)</span></p>
+<p>… at context <span class="math inline">\(D\)</span></p></td>
+<td><span class="math inline">\(m\)</span> is latter than the time of utterance</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(m\)</span> is <em>now</em></td>
+<td><p>… at a context <span class="math inline">\(C\)</span></p>
+<p>… at context <span class="math inline">\(D\)</span></p></td>
+<td><span class="math inline">\(m\)</span> is simultaneous with the time of utterance</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(m\)</span> is earlier than <em>now</em></td>
+<td><p>… at a context <span class="math inline">\(C\)</span></p>
+<p>… at context <span class="math inline">\(D\)</span></p></td>
+<td><span class="math inline">\(m\)</span> is earlier than the time of utterance</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="now-indexicality" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="now-indexicality"><span class="header-section-number">4.2</span> Now, Indexicality</h2>
+<p>The A-theorist understands the word differenty. For she takes the word ‘now’ to correspond to an objective, perspective-independent property of <em>being present</em>. This is an objective property an event briefly exemplifies before receding into the past.</p>
+<p>There is an important parallel with the word ‘actually’. Compare:</p>
+<ul>
+<li><p>It is <em>actually</em> the case that there human outposts in the Arctic.</p></li>
+<li><p>It is merely <em>possibly</em> the case that there are human outposts in Mars.</p></li>
+</ul>
+<p>Two treatments of the word come to mind. One could treat the relevant sentences as covertly indexical:</p>
+<ul>
+<li><p>There are human outposts in the Arctic at the world at which the utterance is made.</p></li>
+<li><p>There are human outposts in Mars at a world that is possible relative to the world at which the utterance is made.</p></li>
+</ul>
+<p>Alternatively, we could take the word to stand for an absolute and perspective-independent property: <em>being actual</em>. That is a property human outposts in the Arctic exemplify but human outposts in Mars do not. The view that emerges, which we may call <em>actualism</em>, is parallel to the presentist variant of the A-theory.</p>
+</section>
+<section id="no-irreducible-tensed-facts" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="no-irreducible-tensed-facts"><span class="header-section-number">4.3</span> No Irreducible Tensed Facts</h2>
+<p>The B-theory rejects the existence of irreducibly tensed facts, which the A-theorist sometimes takes to explain some aspects of our experience of time. Consider the puzzle:</p>
+<blockquote class="blockquote">
+<p>You wake up in a hospital ward after an episode of amnesia. You are reliably informed that you are either a patient who underwent a very painful operation just yesterday or one who will tomorrow experience an operation, which may cause some pain discomfort. Which one would you prefer to be?</p>
+</blockquote>
+<p>If we simply measure the pain associated to each operation, you may have reason to prefer to be the patient who will experience some pain and discomfort tomorrow. On the other hand, most would seem to prefer to be the patient who underwent a very painful operation just yesteday.</p>
+<p>The <em>presentist</em> has an answer:</p>
+<ul>
+<li>You prefer to be the first patient because the very painful operation is no more part of reality. A much less painful experience <em>will</em> come into existence, but you would rather anticipate some discomfort than a very painful experience.</li>
+</ul>
+<p>The <em>spotlight theorist</em> provides a different answer:</p>
+<ul>
+<li>You prefer to be the first patient because the very painful operation has ceased to be <em>present</em>. A much less painful experience lies in the future and will be present, but they would rather anticipate some discomfort than a very painful experience.</li>
+</ul>
+<p>The presentist is not impressed by that answer. If the very painful operation is just as real as present events and objects, then it is just as painful as we described it and it is not clear how receding into the past is supposed to help explain our preferences.</p>
+<p>The <em>B-theorist</em> has fewer resources to explain the preference:</p>
+<ul>
+<li>You prefer to be the first patient because the very painful operation took place earlier. A much less painful experience comes later, but you would rather anticipate some discomfort and a very painful experience.</li>
+</ul>
+<p>The presentist is even less impressed. If the very painful operation is just as real as the future less painful one, should you not prefer to be the patient with the less painful experience?</p>
+<p>How should the B-theorist respond? <span class="citation" data-cites="Sider2003-SIDFDP">(<a href="references.html#ref-Sider2003-SIDFDP" role="doc-biblioref">Sider 2003</a>)</span> draws an analogy with the question of whether there are <em>irreducibly indexical</em> facts? Consider John Perry’s case:</p>
+<blockquote class="blockquote">
+<p>Rudolf Lingens is an amnesiac lost into the Stanford Library when he stumbles into a book entitled ‘Rudolf Lingens: A Complete Biography’. He reads the book with special interest, and comes to have access to a great variety of facts to do with Lingens:</p>
+<ul>
+<li><p>Lingens has three siblings.</p></li>
+<li><p>Lingens began his career as an engineer, etc.</p></li>
+</ul>
+<p>It seems like there are important facts beyond his ken:</p>
+<ul>
+<li><p><em>I</em> have three siblings</p></li>
+<li><p><em>I</em> began my career as an engineer,</p></li>
+<li><p><em>I</em> am Rudolf Lingens.</p></li>
+</ul>
+</blockquote>
+<p>There are two potential morals:</p>
+<ol type="1">
+<li>There are irreducibly <em>indexical facts</em> beyond the facts that describable in an impersonal language without indexicals.</li>
+<li>Some attitudes and relations to impersonal propositions are <em>irreducibly perspectival</em>. The attitudes expressed by sentences that involve indexicals require a certain vantage point, one to which the amnesiac Rudolf Lingens has no access.</li>
+</ol>
+<p><span class="citation" data-cites="Sider2003-SIDFDP">(<a href="references.html#ref-Sider2003-SIDFDP" role="doc-biblioref">Sider 2003</a>)</span> outlines a parallel response to the challenge above:</p>
+<ol start="3" type="1">
+<li>There are <em>no</em> irreducibly tensed facts.</li>
+<li>Some attitudes and relations to facts and events is <em>irreducibly perspectival</em>.</li>
+</ol>
+<p>Episodes of <em>relief</em> that a given operation is over require the subject to be located <em>after</em> the relevant operation. Episodes of <em>anxiety</em> that a new operation is imminent, on the other hand, require the subject to be located prior the relevant event. Relief, in other words, is only appropriate for past events, whereas anxiety is appropriate for future events.</p>
+<p>Attitudes like relief and anticipation are not merely two-place relations between a subject and a proposition, but rather a three-place relation between a subject, a time, and a proposition, and the time has to be appropriately related to the proposition in question.</p>
+</section>
+<section id="against-temporal-passage" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="against-temporal-passage"><span class="header-section-number">4.4</span> Against Temporal Passage</h2>
+<p>The B-theory of Time accepts the existence of a four-dimensional manifold, whose regions are occupied by equally real events and objects. The fact that some events and objects, e.g., dinosaurs, are found in spatiotemporal regions that precede now by millions of years does not make them less real than objects now.</p>
+<p>Reality is <em>static</em> and change is just variation in what features something exemplifies at different spacetime regions. The global pattern of exemplification, however, is permanent and not subject to further change. The B-theory makes no room for the view that time passes.</p>
+<p><span class="citation" data-cites="Smart1949-SMATRO-3">(<a href="references.html#ref-Smart1949-SMATRO-3" role="doc-biblioref">Smart 1949</a>)</span> characterizes passage as a metaphor:</p>
+<blockquote class="blockquote">
+<p>we think of ourselves as stationary, watching time go by, just as we may stand on a bridge and watch leaves and sticks float down the stream underneath us. Events, we sometimes think, are like such leaves and sticks; they approach from the future, are momentarily in the present, and then recede further and further into the past. Thus instead of speaking of our advance through time we often speak of the flow of time.</p>
+</blockquote>
+<p>But there is, for him, nothing over and above a metaphor:</p>
+<blockquote class="blockquote">
+<p>we cannot talk about time as a river, about the flow of time, of our advance through time, or of the irreversibility of time without being in great danger of falling into absurdity.</p>
+</blockquote>
+<p>There are several routes towards absurdity for Smart, but we will just focus on one.</p>
+<ol type="1">
+<li>If time passes, then there is a fact of the matter as to the rate at which it passes</li>
+<li>There is no fact of the matter as to the rate at which time passes.</li>
+<li>Time does not pass.</li>
+</ol>
+<p>When we discuss the rate at which a car moves through space, we measure how long it takes for the car to cover a certain distance in space, e.g., 40 miles per hour. To measure the rate at which <em>the present</em> moves through time, we would seem to look at <em>how long</em> it takes for the present to move from one time to another. There are, on the face of it, two options:</p>
+<ul>
+<li><p>Measure how long it takes for the present to move from time to another relative to <em>another time dimension.</em></p></li>
+<li><p>Endorse the utterly uninformative answer that the present moves at a rate of <em>one second per second.</em></p></li>
+</ul>
+<p>The first option seems a departure from the A-theory, since nothing in the dynamic view of time requires the existence of another time dimension. And even if one accepted the existence of such a dimension, further questions would immediately arise as to whether time passes through that dimension as well.</p>
+<p>The second option may seem to involve a perfectly coherent answer to the question of the rate of passage, but some object it is not particularly illuminating and that there is something to be learned from the impossibility of such an answer.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Sider2003-SIDFDP" class="csl-entry" role="listitem">
+Sider, Theodore. 2003. <em>Four Dimensionalism</em>. Oxford, GB: Oxford University Press UK.
+</div>
+<div id="ref-Smart1949-SMATRO-3" class="csl-entry" role="listitem">
+Smart, J. 1949. <span>“The River of Time.”</span> <em>Mind</em> 58 (232): 483–94. <a href="https://doi.org/10.1093/mind/lviii.232.483">https://doi.org/10.1093/mind/lviii.232.483</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
