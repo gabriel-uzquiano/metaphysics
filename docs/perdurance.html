@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -69,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -315,8 +364,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#temporal-parts" id="toc-temporal-parts" class="nav-link active" data-scroll-target="#temporal-parts"><span class="header-section-number">7.1</span> Temporal Parts</a></li>
+  <li><a href="#how-to-argue-for-perdurantism" id="toc-how-to-argue-for-perdurantism" class="nav-link" data-scroll-target="#how-to-argue-for-perdurantism"><span class="header-section-number">7.2</span> How to Argue for Perdurantism</a></li>
+  <li><a href="#time-travel-and-perdurance" id="toc-time-travel-and-perdurance" class="nav-link" data-scroll-target="#time-travel-and-perdurance"><span class="header-section-number">7.3</span> Time Travel and Perdurance</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -340,8 +397,180 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Perdurance is parallel to spatial extension. For a road to be spatially extended is for the road to consist of different spatial parts, one for each spatial region it occupies. Perdurance is similar. For a person to be temporally extended is for the individual to consist of different temporal parts, one for each time at which the individual exists.</p>
+<section id="temporal-parts" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="temporal-parts"><span class="header-section-number">7.1</span> Temporal Parts</h2>
+<p>One potential objection concerns the concept of a temporal part. We are completely familiar with the relation a part like the torso of a statue bears to a whole like the statue, but that is <em>spatial part</em>. The torso is a spatial part of the statue, and it is in fact part of it at a given part. But what exactly is for something to be a temporal part of something else?</p>
+<p>One answer involves an <em>atemporal</em> relation of part to whole. That is, a relation an object <span class="math inline">\(x\)</span> bears to an object <span class="math inline">\(y\)</span>, regardless of time:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Temporal Part
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(x\)</span> is a <em>temporal part</em> of <span class="math inline">\(y\)</span> at time <span class="math inline">\(t\)</span> if and only if</p>
+<ol type="1">
+<li><span class="math inline">\(x\)</span> is part of <span class="math inline">\(y\)</span>.</li>
+<li><span class="math inline">\(x\)</span> exists at <span class="math inline">\(t\)</span>, and only at <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(x\)</span> overlaps every part of <span class="math inline">\(y\)</span> that exists at <span class="math inline">\(t\)</span>.</li>
+</ol>
+</div>
+</div>
+<p>Your temporal parts are supposed to be parts of you with a certain temporal extent or location. It is <em>not</em> that they are part of you at one time but not at another. This is, on the face of it, very different from <em>spatial part</em>: one object may be part of another at one time and not at another. We understand what it is for an object to be part of another at a given time, but it is not clear we have room for a simple two-place relation of part to whole. Or at least it is not clear how it relates to the more familiar three-place relation: <span class="math inline">\(x\)</span> is part of <span class="math inline">\(y\)</span> at <span class="math inline">\(t\)</span>.</p>
+<p>One way for the perdurantist to address the issue is to present the view in terms of a temporally relativized relation of part to whole at a time. <span class="citation" data-cites="wasserman2017paradoxes">(<a href="references.html#ref-wasserman2017paradoxes" role="doc-biblioref">Wasserman 2017</a>)</span> begins with two primitive predicates:</p>
+<p><span class="math display">\[
+x \ \text{is a part of} \ y \ \text{at} \ t,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+x \ \text{exists at} \ t.
+\]</span></p>
+<p>Both are familiar relations. Ordinary objects change their parts. The windshield that used to be part of my car before its replacement is now no longer a part of my cart. On the other hand, objects exist at some time intervals and not others.</p>
+<p>The first task now is to explain what is for a time interval to be time span of a given object:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Time Span
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(x\)</span> is the <strong>time span</strong> of <span class="math inline">\(x\)</span> if, and only if:</p>
+<ol type="1">
+<li><p><span class="math inline">\(x\)</span> exists at <span class="math inline">\(t\)</span>.</p></li>
+<li><p><span class="math inline">\(x\)</span> exists at every subinterval of <span class="math inline">\(t\)</span>.</p></li>
+<li><p><span class="math inline">\(x\)</span> does <em>not</em> exist at intervals wholly distinct from <span class="math inline">\(t\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<p>Two intervals are <em>wholly distinct</em> if they have no times or time intervals in common. For the definition of temporal part, we introduce one more defined predicate: <span class="math inline">\(x\)</span> overlaps <span class="math inline">\(y\)</span> at <span class="math inline">\(t\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Overlap
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(x\)</span> <strong>overlaps</strong> <span class="math inline">\(y\)</span> at <span class="math inline">\(t\)</span> iff there is some <span class="math inline">\(z\)</span>, which is both a part of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> at <span class="math inline">\(t\)</span>.</p>
+</div>
+</div>
+<p>We are now in position to deliver a tentative definition of temporal part in terms of the primitive relations isolated above:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Temporal Part
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(x\)</span> is a <strong>temporal part</strong> of <span class="math inline">\(y\)</span> at <span class="math inline">\(t\)</span> if, and only if:</p>
+<ol type="1">
+<li><p><span class="math inline">\(t\)</span> is the time span of <span class="math inline">\(x\)</span>.</p></li>
+<li><p><span class="math inline">\(x\)</span> is part of <span class="math inline">\(y\)</span> at <span class="math inline">\(t\)</span>.</p></li>
+<li><p><span class="math inline">\(x\)</span> overlaps at <span class="math inline">\(t\)</span> every part of <span class="math inline">\(y\)</span> at <span class="math inline">\(t\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<p>Temporal parts at a given time or time interval <span class="math inline">\(t\)</span> are material objects. The first clause makes sure these material objects have the appropriate temporal extent; the second clause requires the objects in question to be genuine parts of the temporally extended object. Finally, the last clause ensures that the temporal part overlaps parts of the object at the relevant time.</p>
+<p>The definition is parallel to the definition of <em>instantaneous temporal part</em> <span class="citation" data-cites="Sider2003-SIDFDP">(<a href="references.html#ref-Sider2003-SIDFDP" role="doc-biblioref">Sider 2003</a>)</span> provides in p.&nbsp;59. The main difference is that the definition above generalizes to <em>non-instantaneous</em> time intervals, e.g., my temporal part at the extended interval from 8:30am to 9am.</p>
+<p>This matters because there are models of time without instants. Instead, we find only extended temporal intervals, which may approximate what would have been an instant as closely as one may want.</p>
+<p>Perdurantism presupposes an ontological thesis according to which spatiotemporally extended objects have temporal parts at every interval at which they exist.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Four-dimensionalism
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Necessarily, each spatiotemporal object has a temporal part at every time interval at which it exists.</p>
+</div>
+</div>
+<p>Notice that as stated, four-dimensionalism is merely an ontological thesis. It posits the existence of temporal parts for spatiotemporal objects, but it does <em>not</em> by itself address the question of persistence: nowhere in the formulation of four-dimensionalism it is said that material objects persist through time <strong>by virtue</strong> of having different temporal parts at different times at which they exist. This suggests to <span class="citation" data-cites="wasserman2017paradoxes">(<a href="references.html#ref-wasserman2017paradoxes" role="doc-biblioref">Wasserman 2017</a>)</span> that perdurantism should be formulated differently:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Perdurantism
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Objects persist through time by having different temporal parts at different times at which they exist.</p>
+</div>
+</div>
+<p>Perdurance presupposes four-dimensionalism but it provides an explicit answer to the question of persistence.</p>
+</section>
+<section id="how-to-argue-for-perdurantism" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="how-to-argue-for-perdurantism"><span class="header-section-number">7.2</span> How to Argue for Perdurantism</h2>
+<p>The combination of four-dimensionalism and perdurantism against the backdrop of the B-theory of time is often offered as a package deal, which promises to deliver elegant solutions to a wide family of puzzles in metaphysics:</p>
+<ol type="1">
+<li><p>Change</p>
+<p>Some objects exemplify change in <em>intrinsic</em> properties. A candle may be 7-inches long at one time and 5-inches long at another. Whether the candle is 5- or 7-inches long is not a matter of how the candle is related to something else. Yet, nothing can be both 5- and 7-inches long.</p></li>
+<li><p>The Puzzles of Coincidence</p>
+<p>The statue is, on the face of it, something over and above the portion of clay of which it is made. But both statue and clay are material objects. No two different material objects can occupy the same space at the same time, yet the statue and the clay appear to do just that.</p></li>
+<li><p>Fission</p>
+<p>What it makes a person at one time to be the same as another at an earlier time is that there is a chain of psychological continuity and connectedness between one and the other stage. But we can imagine cases in which one and the same stage is psychologically continuous and connected to two different person stages in the future. On the other hand, since the future person stages are different from each other, the earlier stage cannot be identical to both.</p></li>
+</ol>
+</section>
+<section id="time-travel-and-perdurance" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="time-travel-and-perdurance"><span class="header-section-number">7.3</span> Time Travel and Perdurance</h2>
+<p>Does time travel present special problems for perdurantism?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Self-Visitation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Self-visitation is a staple of time travel fiction. Consider Tim, the time traveler who is born in 1980 and decides to step into the time machine once he turns fifty. Tim turns the dial and finally emerges in his college room in the year 2000. We may even imagine that the fifty-year old Tim comes to warn twenty-year old Tim about his future.</p>
+</div>
+</div>
+<p>On the face of it, the fifty- and the twenty-year old are <em>two</em> different people:</p>
+<ol type="1">
+<li>Fifty-year old Tim is wholly gray-haired.</li>
+<li>Twenty-year old Tim is wholly brown-haired.</li>
+<li>Nothing is both wholly gray- and wholly brown-haired.</li>
+</ol>
+<p>But if this is in fact a case of self-visitation, then there is exactly one person in the room, who is wholly gray-haired and wholly brown-haired.</p>
+<p>How is perdurance supposed to help with this scenario? One may be tempted to respond that there are two different person stages at the time <span class="math inline">\(t\)</span> of self-visitation:</p>
+<ol type="1">
+<li>Tim has a fifty-year old temporal part at <span class="math inline">\(t\)</span></li>
+<li>Tim has a twenty-year old temporal part at <span class="math inline">\(t\)</span></li>
+</ol>
+<p>Furthermore, one may be tempted to add that the temporal parts in question differ in spatial location at <span class="math inline">\(t\)</span>. Unfortunately, that is not what follows from the account of temporal part with which we started. Instead:</p>
+<ol start="3" type="1">
+<li>Tim has a spatially disconnected temporal part at <span class="math inline">\(t\)</span>, one that is scattered in the room.</li>
+</ol>
+<p>But then the question arises whether Tim is wholly gray-haired or wholly brown-haired at <span class="math inline">\(t\)</span>, and it looks like the answer should be <strong>neither</strong>: Tim’s temporal part at <span class="math inline">\(t\)</span> does not exemplify the property of being wholly gray-haired or the property of being wholly brown-haired.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Sider2003-SIDFDP" class="csl-entry" role="listitem">
+Sider, Theodore. 2003. <em>Four Dimensionalism</em>. Oxford, GB: Oxford University Press UK.
+</div>
+<div id="ref-wasserman2017paradoxes" class="csl-entry" role="listitem">
+Wasserman, Ryan. 2017. <em>Paradoxes of Time Travel</em>. Oxford University Press.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
