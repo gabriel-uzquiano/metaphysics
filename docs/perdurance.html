@@ -369,7 +369,11 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#temporal-parts" id="toc-temporal-parts" class="nav-link active" data-scroll-target="#temporal-parts"><span class="header-section-number">7.1</span> Temporal Parts</a></li>
+  <li><a href="#temporal-parts" id="toc-temporal-parts" class="nav-link active" data-scroll-target="#temporal-parts"><span class="header-section-number">7.1</span> Temporal Parts</a>
+  <ul class="collapse">
+  <li><a href="#parts-and-wholes" id="toc-parts-and-wholes" class="nav-link" data-scroll-target="#parts-and-wholes"><span class="header-section-number">7.1.1</span> Parts and Wholes</a></li>
+  <li><a href="#classical-mereology" id="toc-classical-mereology" class="nav-link" data-scroll-target="#classical-mereology"><span class="header-section-number">7.1.2</span> Classical Mereology</a></li>
+  </ul></li>
   <li><a href="#how-to-argue-for-perdurantism" id="toc-how-to-argue-for-perdurantism" class="nav-link" data-scroll-target="#how-to-argue-for-perdurantism"><span class="header-section-number">7.2</span> How to Argue for Perdurantism</a></li>
   <li><a href="#time-travel-and-perdurance" id="toc-time-travel-and-perdurance" class="nav-link" data-scroll-target="#time-travel-and-perdurance"><span class="header-section-number">7.3</span> Time Travel and Perdurance</a></li>
   </ul>
@@ -401,7 +405,38 @@ window.Quarto = {
 <section id="temporal-parts" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="temporal-parts"><span class="header-section-number">7.1</span> Temporal Parts</h2>
 <p>One potential objection concerns the concept of a temporal part. We are completely familiar with the relation a part like the torso of a statue bears to a whole like the statue, but that is <em>spatial part</em>. The torso is a spatial part of the statue, and it is in fact part of it at a given part. But what exactly is for something to be a temporal part of something else?</p>
-<p>One answer involves an <em>atemporal</em> relation of part to whole. That is, a relation an object <span class="math inline">\(x\)</span> bears to an object <span class="math inline">\(y\)</span>, regardless of time:</p>
+<section id="parts-and-wholes" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="parts-and-wholes"><span class="header-section-number">7.1.1</span> Parts and Wholes</h3>
+<p>It will be helpful to fix some terminology. Talk of parts and wholes is often regimented and systematized by the axioms of a formal theory called <em>mereology.</em> We may take as primitive a predicate for the part to whole relation:</p>
+<p><span class="math display">\[
+x \leq y \tag{$x$ is a part of $y$}
+\]</span></p>
+<p>Some definitions:</p>
+<p><span class="math display">\[
+\begin{array}{lll}
+x \circ y &amp; := &amp; \exists z (z \leq x \wedge z \leq y) &amp; \text{($x$ overlaps $y$)}\\
+x Fu S &amp; := &amp; \forall z (z \leq x \leftrightarrow \exists y (y \in S \wedge z \circ y)) &amp; \text{($x$ is a fusion of $S$)}
+\end{array}
+\]</span></p>
+<p>One axiomatization of Classical Mereology in terms of part is found in <span class="citation" data-cites="lewis-parts">(<a href="references.html#ref-lewis-parts" role="doc-biblioref">Lewis 1991</a>)</span> and consists of three simple axioms:</p>
+</section>
+<section id="classical-mereology" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="classical-mereology"><span class="header-section-number">7.1.2</span> Classical Mereology</h3>
+<p><span class="math display">\[
+\begin{array}{llll}
+\text{Transitivity} &amp; &amp; (x \leq y \wedge y \leq z) \to x \leq z\\
+\text{Unrestricted Fusion} &amp; &amp; \forall S \ \exists x  \ xFu S\\
+\text{Unique Fusion} &amp; &amp; \forall S \ \forall x \forall y  \ ((xFu  S \wedge y Fu S) \to x = y)\\
+\end{array}
+\]</span></p>
+<p>One axiom states that fusion is transitive and the other two claim that each set has one, and only one fusion. Several important consequences are that the relation of part to whole is <strong>reflexive</strong> and <strong>anti-symmetric</strong>:</p>
+<p><span class="math display">\[
+\begin{array}{lll}
+\text{Reflexivity} &amp; &amp; x \leq y   \\
+\text{Anti-symmetry} &amp; &amp; x \leq y \wedge y \leq x \to x = y  \\
+\end{array}
+\]</span></p>
+<p>Notice that this is an <em>atemporal</em> relation of part to whole. That is, a relation an object <span class="math inline">\(x\)</span> bears to an object <span class="math inline">\(y\)</span>, regardless of time. We are in a position to use that relation as a primitive in order to define what is for something to be a temporal part of something else:</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -412,7 +447,7 @@ Temporal Part
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(x\)</span> is a <em>temporal part</em> of <span class="math inline">\(y\)</span> at time <span class="math inline">\(t\)</span> if and only if</p>
+<p><span class="math inline">\(x\)</span> is a <em>temporal part</em> of <span class="math inline">\(y\)</span> at time (or time interval) <span class="math inline">\(t\)</span> if and only if</p>
 <ol type="1">
 <li><span class="math inline">\(x\)</span> is part of <span class="math inline">\(y\)</span>.</li>
 <li><span class="math inline">\(x\)</span> exists at <span class="math inline">\(t\)</span>, and only at <span class="math inline">\(t\)</span>.</li>
@@ -515,6 +550,7 @@ Perdurantism
 </div>
 <p>Perdurance presupposes four-dimensionalism but it provides an explicit answer to the question of persistence.</p>
 </section>
+</section>
 <section id="how-to-argue-for-perdurantism" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="how-to-argue-for-perdurantism"><span class="header-section-number">7.2</span> How to Argue for Perdurantism</h2>
 <p>The combination of four-dimensionalism and perdurantism against the backdrop of the B-theory of time is often offered as a package deal, which promises to deliver elegant solutions to a wide family of puzzles in metaphysics:</p>
@@ -563,6 +599,9 @@ Self-Visitation
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-lewis-parts" class="csl-entry" role="listitem">
+Lewis, David. 1991. <span>“Parts of Classes.”</span>
+</div>
 <div id="ref-Sider2003-SIDFDP" class="csl-entry" role="listitem">
 Sider, Theodore. 2003. <em>Four Dimensionalism</em>. Oxford, GB: Oxford University Press UK.
 </div>
