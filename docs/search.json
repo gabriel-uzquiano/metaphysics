@@ -432,18 +432,29 @@
     "href": "coincidence.html",
     "title": "11  The Puzzles of Coincidence",
     "section": "",
-    "text": "11.1 The Statue and the Clay\nThe problem of change asked how can one and the same object exemplify incompatible qualities? The puzzles of coincidence ask an orthogonal question: how can two different objects share their matter and spatial location, and yet remain numerically distinct? They put pressure on a certain view of material objects as completely individuated by their matter.\nA sculptor creates a statue, which we may call Goliath, from a lump of clay, which we may call Lumpl.",
+    "text": "11.1 The Statue and the Clay\nThe problem of change calls for an answer to the question of how can one and the same object exemplify incompatible qualities? The puzzles of coincidence are motivated by an orthogonal question: how can two objects share their matter and spatial location, and yet remain numerically distinct? They put pressure on a certain view of material objects as completely individuated by their matter.\nFor (Sider 2003), the puzzles of coincidence provide the basis of a powerful case for at least one variant of perdurantism, which he calls the worm view. This is, briefly, an account on which material objects are identified with their spatiotemporal path.\nHe makes a distinction between different cases of coincidence.\nA sculptor creates a statue, which we may call Goliath, from a lump of clay, which we may call Lumpl, at noon. The lump of clay had been in the sculptor’s studio for days before she decided to mold it into a statue. We now argue that Goliath and Lumpl are two numerically different material objects, which share the same spatial location and the same matter immediately after the statue has been created:\nThis appears to conflict with the platitude that no two numerically different material objects can share the same spatial location and the same matter.",
     "crumbs": [
       "Identity",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>The Puzzles of Coincidence</span>"
     ]
   },
   {
-    "objectID": "coincidence.html#the-problem-of-the-many",
-    "href": "coincidence.html#the-problem-of-the-many",
+    "objectID": "coincidence.html#the-statue-and-the-clay",
+    "href": "coincidence.html#the-statue-and-the-clay",
     "title": "11  The Puzzles of Coincidence",
-    "section": "11.2 The Problem of the Many",
-    "text": "11.2 The Problem of the Many",
+    "section": "",
+    "text": "Lumpl existed before noon.\nGoliath did not exist before noon.\nTherefore, Goliath is numerically different from Lumpl.",
+    "crumbs": [
+      "Identity",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>The Puzzles of Coincidence</span>"
+    ]
+  },
+  {
+    "objectID": "coincidence.html#tibbles-the-cat",
+    "href": "coincidence.html#tibbles-the-cat",
+    "title": "11  The Puzzles of Coincidence",
+    "section": "11.2 Tibbles the Cat",
+    "text": "11.2 Tibbles the Cat\nWe begin with a cat, Tibbles, and a proper part, Tib, which consists of all of Tibbles except for the tail. Here is Fig. 5.1 from (Sider 2003):\n\n\n\n\n\nHere is a case for coincidence. Suppose that Tibbles loses its tail at 1:30pm. On the one hand, we may argue that Tibbles is numerically different from Tib on the grounds that something is true of one that is not true of the other, e.g., Tibbles exactly occupies a certain space region \\(R\\) at 1pm, which Tib does not exactly occupy.\n\nTibbles exactly occupies at 1pm a space region, which Tib does not exactly occupy.\nTherefore, Tibbles is different from Tib.\n\nBut after the detachment, it seems like Tibbles and Tib become coincident objects:\n\nTibbles and Tib share the same spatial location at 2pm, and, moreover, they share the same matter.",
     "crumbs": [
       "Identity",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>The Puzzles of Coincidence</span>"
@@ -454,7 +465,18 @@
     "href": "coincidence.html#fission",
     "title": "11  The Puzzles of Coincidence",
     "section": "11.3 Fission",
-    "text": "11.3 Fission",
+    "text": "11.3 Fission\nA flatworm is able to survive severe tissue damage, and, in fact, a flatworm is able to survive a division into two separate organisms that might then take different ways, never to meet again or to have significant interaction with each other. Consider a case of fission for a flatworm at noon. What used to be one organism before noon, which we may call F, turns after division into two different organisms Fa and Fb. The case for coincidence is more subtle.\nFirst, one argues that F is numerically different from Fa and Fb, respectively.\n\nFa is numerically different from Fb.\nF is numerically identical to Fa if, and only if, F is numerically identical to Fb.\nIf Fa is numerically identical to F, and F is numerically identical to Fb, then Fa is numerically identical with Fb.\nTherefore, F is neither numerically identical to Fa nor numerically identical with Fb.\n\nThe justification from 3 comes from the transitivity of numerical identity. So, if F could be numerically identical to both Fa and Fb, then Fa would have to be numerically identical to Fb, which contradicts the very first premise.\nThe perdurantist is keen to describe this as a case of coincidence, since they think that both Fa and Fb existed well before separation.\n\nFa existed before fission, and up until noon, Fa shared the same spatial location and matter with F (and Fb).\nFb existed before fission, and up until noon, Fb shared the same spatial location and matter with F (and Fa).\n\nSo, prior to noon, and despite appearances to the contrary, we had at least three different but coincident flatworms before us: F, Fa, and Fb.",
+    "crumbs": [
+      "Identity",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>The Puzzles of Coincidence</span>"
+    ]
+  },
+  {
+    "objectID": "coincidence.html#the-worm-view-and-coincidence",
+    "href": "coincidence.html#the-worm-view-and-coincidence",
+    "title": "11  The Puzzles of Coincidence",
+    "section": "11.4 The Worm View and Coincidence",
+    "text": "11.4 The Worm View and Coincidence\nThe worm view of material objects takes them to be four-dimensional objects with a spatiotemporal path. Not only do they have temporal parts, they include other four-dimensional objects as parts. This provides the worm theorist with some resources to describe cases of coincidence as cases in which two material objects share temporal parts in much the same way in which two roads are able to share a stretch of road.\n\n11.4.1 The Statue and the Clay\nThis is a case in which Goliath and Lumpl share temporal parts at all times at which the statue exists. We may suppose that Lumpl existed before noon, which is when the sculptor molded the lump of clay into a statue, and will continue to exist after the statue is eventually squashed. Notice that Lumpl will survive being squashed, which means that in the situation at hand, Goliath is a proper four-dimensional part of Lumpl. Here is how (Sider 2003) depicts the situation:\n\n\n\n\n\n\n\n11.4.2 Tibbles and Tib\nThe perdurantist will give a similar redescription of Tibbles and Tib. Tibbles and Tib are two numerically distinct four-dimensional objects, which share temporal parts as soon as Tibbles loses its tail at 1:30pm. Neither Tib nor Tibbles is a four-dimensional part of the other, but they have a common four-dimensional proper part from 1:30pm until the end of Tibbles. Here is the diagram (Sider 2003) provides:\n\n\n\n\n\n\n\n11.4.3 Fission\nThe worm theorist is in a position to offer an elegant redescription of fission. The \\(Y\\)-shaped diagram includes at least three four-dimensional objects, \\(F_a\\), \\(F_b\\), and \\(F\\). \\(F\\) is represented by the grey stem in the diagram, which is itself a four-dimensional proper part of each \\(F_a\\) and \\(F_b\\). Both of these are four-dimensional objects, which consist of a shared four-dimensional part and a blue and a red four-dimensional part, respectively. This is indeed completely parallel to the case of two roads, which happen to share a common stretch of road.\n\n\n\n\n\nOverall, the worm view offers a unified approach to the puzzles of coincidence, which, for (Sider 2003), constitutes a powerful argument for the view.\n\n\n\n\nSider, Theodore. 2003. Four Dimensionalism. Oxford, GB: Oxford University Press UK.",
     "crumbs": [
       "Identity",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>The Puzzles of Coincidence</span>"
