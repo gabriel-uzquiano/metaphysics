@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -69,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -315,8 +364,28 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#time-travel-and-perdurance" id="toc-time-travel-and-perdurance" class="nav-link active" data-scroll-target="#time-travel-and-perdurance"><span class="header-section-number">13.1</span> Time Travel and Perdurance</a>
+  <ul class="collapse">
+  <li><a href="#the-problem-of-identity" id="toc-the-problem-of-identity" class="nav-link" data-scroll-target="#the-problem-of-identity"><span class="header-section-number">13.1.1</span> The Problem of Identity</a></li>
+  <li><a href="#change-revisited" id="toc-change-revisited" class="nav-link" data-scroll-target="#change-revisited"><span class="header-section-number">13.1.2</span> Change Revisited</a></li>
+  </ul></li>
+  <li><a href="#time-travel-and-endurance" id="toc-time-travel-and-endurance" class="nav-link" data-scroll-target="#time-travel-and-endurance"><span class="header-section-number">13.2</span> Time Travel and Endurance</a>
+  <ul class="collapse">
+  <li><a href="#relational-change" id="toc-relational-change" class="nav-link" data-scroll-target="#relational-change"><span class="header-section-number">13.2.1</span> Relational Change</a></li>
+  <li><a href="#the-possibility-of-co-location" id="toc-the-possibility-of-co-location" class="nav-link" data-scroll-target="#the-possibility-of-co-location"><span class="header-section-number">13.2.2</span> The Possibility of Co-Location</a></li>
+  </ul></li>
+  <li><a href="#multi-visitation-and-mereology" id="toc-multi-visitation-and-mereology" class="nav-link" data-scroll-target="#multi-visitation-and-mereology"><span class="header-section-number">13.3</span> Multi-Visitation and Mereology</a>
+  <ul class="collapse">
+  <li><a href="#multi-visitation-and-perdurance" id="toc-multi-visitation-and-perdurance" class="nav-link" data-scroll-target="#multi-visitation-and-perdurance"><span class="header-section-number">13.3.1</span> Multi-Visitation and Perdurance</a></li>
+  <li><a href="#multi-visitation-and-endurance" id="toc-multi-visitation-and-endurance" class="nav-link" data-scroll-target="#multi-visitation-and-endurance"><span class="header-section-number">13.3.2</span> Multi-Visitation and Endurance</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -340,8 +409,221 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Time travel scenarios put pressure on views of persistence, since they give rise to more intractable variations on the puzzles we have discussed. We will use self-visitation cases to stress-test two accounts of persistence: perdurance and endurance.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Self-Visitation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider Tim, the time traveler who is born in 1980 and decides to step into the time machine once he turns fifty. Tim turns the dial and finally emerges in his college room in the year 2000. We may even imagine that the fifty-year old Tim finds a way to talk to twenty-year old Tim.</p>
+</div>
+</div>
+<p>Before we formulate the problem, we should make explicit some presuppositions:</p>
+<ol type="1">
+<li><p>Self-visitation involves <strong>numerical identity</strong>.</p>
+<p>Fifty-year old Tim is numerically identical to twenty-year old Tim. They are one and the same person.</p></li>
+<li><p>Self-visitation involves <strong>qualitative change</strong>.</p>
+<p>Fifty-year old Tim is wholly gray-haired, but twenty-year old Tim is wholly brown-haired.</p></li>
+<li><p>The qualitative change in question involves <strong>incompatible qualities</strong>.</p>
+<p>Nothing is wholly gray-haired and wholly brown-haired.</p></li>
+<li><p>By Leibniz’s Law, if fifty-year old Tim is numerically identical to twenty-year old Tim, then one exemplifies a quality if, and only if, the other does.</p></li>
+</ol>
+<p>The problem raised by self-visitation is now parallel to the problem of change:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Puzzle
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>If the case involves self-visitation, then fifty-year old Tim is numerically identical to twenty-year old Tim.</li>
+<li>Fifty-year old Tim is wholly gray-haired.</li>
+<li>Twenty-year old Tim is wholly brown-haired.</li>
+<li>No one is both wholly gray-haired and wholly brown-haired.</li>
+</ol>
+<p>It follows from 3 and 4 that</p>
+<ol start="5" type="1">
+<li>Twenty-year old Tim is not wholly gray-haired.</li>
+</ol>
+<p>By Leibniz’s Law:</p>
+<ol start="6" type="1">
+<li>If fifty-year old Tim is numerically identical to twenty-year old Tim, then fifty-year old Tim is wholly gray-haired if, and only if, twenty-year old Tim is.</li>
+</ol>
+<p>So, we conclude from 2, 5, and 6:</p>
+<ol start="7" type="1">
+<li>Fifty-year old Tim is not numerically identical to twenty-year old Tim.</li>
+</ol>
+</div>
+</div>
+<p>It is, however, a strengthened version of the problem, since fifty-year old Tim and twenty-year old Tim appear to exemplify incompatible qualities at one and the same time.</p>
+<section id="time-travel-and-perdurance" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="time-travel-and-perdurance"><span class="header-section-number">13.1</span> Time Travel and Perdurance</h2>
+<p>How would the perdurantist approach the problem above?</p>
+<section id="the-problem-of-identity" class="level3" data-number="13.1.1">
+<h3 data-number="13.1.1" class="anchored" data-anchor-id="the-problem-of-identity"><span class="header-section-number">13.1.1</span> The Problem of Identity</h3>
+<p>One option is to understand the terms ‘fifty-year old Tim’ and ‘twenty-year old Tim’ to denote <em>distinct</em> temporal parts of a four-dimensional object in which case we could deny the first premise of the puzzle.</p>
+<p>One temporal part of Tim is wholly gray-haired whereas the other is wholly brown-haired, but there is no problem since they are numerically distinct objects. But there is a potential conflict with the initial definition of temporal part:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Temporal Part
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(x\)</span> is a <strong>temporal part</strong> of <span class="math inline">\(y\)</span> at <span class="math inline">\(t\)</span> if, and only if:</p>
+<ol type="1">
+<li><p><span class="math inline">\(t\)</span> is the time span of <span class="math inline">\(x\)</span>.</p></li>
+<li><p><span class="math inline">\(x\)</span> is part of <span class="math inline">\(y\)</span> at <span class="math inline">\(t\)</span>.</p></li>
+<li><p><span class="math inline">\(x\)</span> overlaps at <span class="math inline">\(t\)</span> every part of <span class="math inline">\(y\)</span> at <span class="math inline">\(t\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<p>One consequence of the definition is that there is at most one temporal part of Tim at each time at which he visits himself. At one such time <span class="math inline">\(t\)</span>, Tim has a temporal part with a scattered three-dimensional profile. Furthermore, Tim appears to have two <em>person-like</em> spatial parts at <span class="math inline">\(t\)</span>. We can certainly make a distinction between them but notice that we are not entitled to call them temporal parts of Tim.</p>
+</section>
+<section id="change-revisited" class="level3" data-number="13.1.2">
+<h3 data-number="13.1.2" class="anchored" data-anchor-id="change-revisited"><span class="header-section-number">13.1.2</span> Change Revisited</h3>
+<p>One alternative opens up for proponents of perdurance:</p>
+<ul>
+<li><p>For each quality <span class="math inline">\(F\)</span>, Tim is <span class="math inline">\(F\)</span> at <span class="math inline">\(t\)</span> if, and only if, there is some region <span class="math inline">\(R\)</span> such that Tim has a <em>person-like</em> part located at <span class="math inline">\(R\)</span> that is <span class="math inline">\(F\)</span>.</p>
+<p>On this view, qualities such as <em>being wholly gray-haired</em> and <em>being wholly brown-haired</em> are no longer viewed as incompatible:</p>
+<ul>
+<li><p>Tim is wholly gray-haired at <span class="math inline">\(t\)</span>, because Tim has a person-like part located at a region <span class="math inline">\(R\)</span> that is wholly gray-haired.</p></li>
+<li><p>Tim is wholly brown-haired at <span class="math inline">\(t\)</span>, because Tim has a person-like part located at a region <span class="math inline">\(S\)</span> that is wholly brown-haired.</p></li>
+</ul></li>
+</ul>
+<p>The question remains: what exactly are <em>person-like</em> parts of Tim?</p>
+</section>
+</section>
+<section id="time-travel-and-endurance" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="time-travel-and-endurance"><span class="header-section-number">13.2</span> Time Travel and Endurance</h2>
+<p>We landed on a view of endurance on which it is to be contrasted to temporal extension.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Endurance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To <strong>endure</strong> is to be present at more than one time within a time interval in a mode for which the partial/entire distinction does not make sense.</p>
+</div>
+</div>
+<p>It is now not open to endurantists to use ‘fifty-year old Tim’ and ‘twenty-year old Tim’ as labels for two distinct <em>person-like</em> parts of Tim. Tim exists at <span class="math inline">\(t\)</span>, and it occupies two distinct regions <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span>. What they can do is to distinguish the regions in virtue of the qualities Tim exemplifies at them. For example, Tim is wholly gray-haired at <span class="math inline">\(R\)</span> but wholly brown-haired at <span class="math inline">\(S\)</span>.</p>
+<section id="relational-change" class="level3" data-number="13.2.1">
+<h3 data-number="13.2.1" class="anchored" data-anchor-id="relational-change"><span class="header-section-number">13.2.1</span> Relational Change</h3>
+<p>Endurance suggests a different account of exemplification.</p>
+<ul>
+<li><p>For each quality <span class="math inline">\(F\)</span>, Tim is <span class="math inline">\(F\)</span> at <span class="math inline">\(t\)</span> if, and only if, there is some region <span class="math inline">\(R\)</span> such that Tim is <span class="math inline">\(F\)</span> at <span class="math inline">\(t\)</span> at <span class="math inline">\(R\)</span>.</p>
+<p>On this view, qualities such as <em>being wholly gray-haired</em> and <em>being wholly brown-haired</em> are not viewed as relations to times but rather as relations to times and regions of space:</p>
+<ul>
+<li><p>Tim is wholly gray-haired at <span class="math inline">\(t\)</span>, because Tim is wholly gray-haired at <span class="math inline">\(t\)</span> in <span class="math inline">\(R\)</span>.</p></li>
+<li><p>Tim is wholly brown-haired at <span class="math inline">\(t\)</span>, because Tim is wholly brown-haired at <span class="math inline">\(t\)</span> in <span class="math inline">\(S\)</span>.</p></li>
+</ul></li>
+</ul>
+<p>The qualities are still incompatible in that nothing can exemplify them at the same time in the same place. Or can they?</p>
+</section>
+<section id="the-possibility-of-co-location" class="level3" data-number="13.2.2">
+<h3 data-number="13.2.2" class="anchored" data-anchor-id="the-possibility-of-co-location"><span class="header-section-number">13.2.2</span> The Possibility of Co-Location</h3>
+<p>Some models of physics appear to allow for some particles, e.g., bosons with the same energy, to be in the same place at exactly the same time. Whether or not this is the case remains controversial, but we may at least consider the case to be metaphysically possible. But if co-location is metaphysically possible, we face a problem.</p>
+<p>Consider the case of self-visitation <span class="citation" data-cites="wasserman2017paradoxes">(<a href="references.html#ref-wasserman2017paradoxes" role="doc-biblioref">Wasserman 2017</a>)</span> illustrates with the following diagram:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-992065768.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>A particle <span class="math inline">\(p\)</span> begins to move in a northeastern path at <span class="math inline">\(t_1\)</span>, and it is sent back in time at <span class="math inline">\(t_5\)</span>. The particle arrives at <span class="math inline">\(t_2\)</span> above its earlier self, and it begins to move to the southeast. At <span class="math inline">\(t_3\)</span>, the particle passes through its earlier self as it continues its southern descent.</p>
+<p>The problem is that <span class="math inline">\(p\)</span> could in principle have two different velocities as it passes through the region at which it is co-located with its earlier self, call it <span class="math inline">\(r\)</span>. But then:</p>
+<ul>
+<li><p><span class="math inline">\(p\)</span> moves north at a velocity of 15km/h at <span class="math inline">\(t_3\)</span> in <span class="math inline">\(r\)</span>.</p></li>
+<li><p><span class="math inline">\(p\)</span> moves south at a velocity of 20km/h at <span class="math inline">\(t_3\)</span> in <span class="math inline">\(r\)</span>.</p></li>
+</ul>
+<p>But that would require the two velocities to be compatible after all. One way out may be to appeal to personal time and to say that the particle has different velocities at different personal times, even if they have them at the same external time and the same place.</p>
+</section>
+</section>
+<section id="multi-visitation-and-mereology" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="multi-visitation-and-mereology"><span class="header-section-number">13.3</span> Multi-Visitation and Mereology</h2>
+<p>Time travel appears to open the way for scenarios in which one and the same object lies next to earlier or later selves. Consider the curious case <span class="citation" data-cites="wasserman2017paradoxes">(<a href="references.html#ref-wasserman2017paradoxes" role="doc-biblioref">Wasserman 2017</a>)</span> illustrates below:</p>
+<p><img src="images/clipboard-4083710343.png" class="img-fluid"></p>
+<p>You have an unmarked brick with you at <span class="math inline">\(t_0\)</span> as well as the ability to travel back and forth in time. Here is what you do:</p>
+<ul>
+<li>At time <span class="math inline">\(t_1\)</span>, you mark with a ‘1’ and lay it down at region <span class="math inline">\(A\)</span>.</li>
+</ul>
+<!-- -->
+<ul>
+<li><p>You then travel to <span class="math inline">\(t_4\)</span>, where you find an arrangement of three bricks marked ‘1’, ‘2’, and ‘3’. You remove the brick named ‘1’, re-label it ‘2’, and take it back to spot ‘B’ in <span class="math inline">\(t_2\)</span>.</p></li>
+<li><p>You then travel to <span class="math inline">\(t_5\)</span>, where you find two blocks marked ‘2’ and ‘3’ in spots ‘B’ and ‘C’. You remove the brick labeled ‘2’, re-label it ‘3’, and take it back to <span class="math inline">\(t_3\)</span>, where you place it in the spot C.</p></li>
+<li><p>Finally, you travel to <span class="math inline">\(t_6\)</span>, where a single brick labeled ‘3’ remains at <span class="math inline">\(C\)</span>. You remove the mark and take it back to <span class="math inline">\(t_0\)</span>.</p></li>
+</ul>
+<p>Let us focus on the arrangement of bricks we find at <span class="math inline">\(t_3\)</span>:</p>
+<ol type="1">
+<li>Are there three blocks or just one?</li>
+<li>How is the mini-wall located in A + B + C related to the original brick?</li>
+</ol>
+<section id="multi-visitation-and-perdurance" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="multi-visitation-and-perdurance"><span class="header-section-number">13.3.1</span> Multi-Visitation and Perdurance</h3>
+<p>There is, for perdurantists, a single four-dimensional brick, which is composed of several brick-like temporal parts.</p>
+<ul>
+<li><p>At <span class="math inline">\(t_3\)</span>, there are three brick-like temporal parts of the brick, which are laid one next to the other.</p></li>
+<li><p>The mini-wall located in A + B + C is a fusion of three brick-like temporal parts. Given the standard definition of temporal part, at <span class="math inline">\(t_3\)</span>, this is just the temporal part of the original brick. So, the temporal part of the brick is itself composed of three brick-like temporal parts laid next to each other.</p></li>
+</ul>
+</section>
+<section id="multi-visitation-and-endurance" class="level3" data-number="13.3.2">
+<h3 data-number="13.3.2" class="anchored" data-anchor-id="multi-visitation-and-endurance"><span class="header-section-number">13.3.2</span> Multi-Visitation and Endurance</h3>
+<p>Matters are more difficult from the standpoint of endurantism, and we may distinguish different options:</p>
+<section id="identification" class="level4" data-number="13.3.2.1">
+<h4 data-number="13.3.2.1" class="anchored" data-anchor-id="identification"><span class="header-section-number">13.3.2.1</span> Identification</h4>
+<p>One option is to describe the case as one in which a single brick is located both at A and A + B + C:</p>
+<ul>
+<li><p>At <span class="math inline">\(t_3\)</span>, there is only one brick, which is exactly located at each of A, B, and C.</p></li>
+<li><p>The mini-wall located in A + B + C is one and the same brick as the one located at each of A, B, and C.</p></li>
+</ul>
+<p>How much does the brick weight at <span class="math inline">\(t_3\)</span>? If we place the material object we find in A +B + C on a scale, it would presumably weigh three times what the brick weighs. Bur where does the gain come from? On the face of it, the mini-wall should weigh three times what the brick weighs, and the fact that they have different weights seems to be a reason to distinguish them.</p>
+</section>
+<section id="composition" class="level4" data-number="13.3.2.2">
+<h4 data-number="13.3.2.2" class="anchored" data-anchor-id="composition"><span class="header-section-number">13.3.2.2</span> Composition</h4>
+<p>One more option is to claim that at <span class="math inline">\(t_3\)</span>, the past and future selves of the brick compose an object located at A + B + C:</p>
+<ul>
+<li><p>At <span class="math inline">\(t_3\)</span>, there is one brick, which is exactly located at each of A, B, and C.</p></li>
+<li><p>The mini-wall located in A +B + C is a fusion, which has the brick as a <em>proper part</em>. And similarly for the objects located at A + B, B + C, and A + C. They are all fusions with the brick as a proper part at least <em>twice over</em>.</p></li>
+</ul>
+<p>The view, however, conflicts with a central principle of mereology according to which an object is a proper part of another only if there is some part of the latter that does not overlap the former. That, however, appears not to be true in the case at hand. The brick is a proper part of the mini-wall, but the brick overlaps every part of the mini-wall.</p>
+</section>
+<section id="constitution" class="level4" data-number="13.3.2.3">
+<h4 data-number="13.3.2.3" class="anchored" data-anchor-id="constitution"><span class="header-section-number">13.3.2.3</span> Constitution</h4>
+<p>One more alternative is to redescribe the case in terms of constitution:</p>
+<ul>
+<li><p>At <span class="math inline">\(t_3\)</span>, there is one brick, which is exactly located at each of A, B, and C.</p></li>
+<li><p>The material object located in A +B + C is constituted by the brick, but it is different from it since they differ both in their temporal and modal properties.</p></li>
+</ul>
+<p>The mini-wall did not, for example, exist at <span class="math inline">\(t_1\)</span> even though the brick existed at <span class="math inline">\(t_1\)</span>. Nor could the mini-wall survive rearrangement in a way in which the brick would. Furthermore, much like in the case of the statue and the clay,</p>
+<ul>
+<li><p>the brick and the mini-wall are both located at A + B + C.</p></li>
+<li><p>the brick and the mini-wall are made of the same matter.</p></li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-wasserman2017paradoxes" class="csl-entry" role="listitem">
+Wasserman, Ryan. 2017. <em>Paradoxes of Time Travel</em>. Oxford University Press.
+</div>
+</div>
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
