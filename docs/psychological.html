@@ -89,6 +89,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -341,7 +370,7 @@ div.csl-indent {
    
   <ul>
   <li><a href="#the-argument-from-anticipation" id="toc-the-argument-from-anticipation" class="nav-link active" data-scroll-target="#the-argument-from-anticipation"><span class="header-section-number">15.1</span> The Argument from Anticipation</a></li>
-  <li><a href="#the-argument-from-coincidence" id="toc-the-argument-from-coincidence" class="nav-link" data-scroll-target="#the-argument-from-coincidence"><span class="header-section-number">15.2</span> The Argument from Coincidence</a></li>
+  <li><a href="#thomson-on-the-bodily-criterion" id="toc-thomson-on-the-bodily-criterion" class="nav-link" data-scroll-target="#thomson-on-the-bodily-criterion"><span class="header-section-number">15.2</span> Thomson on the Bodily Criterion</a></li>
   </ul>
 </nav>
     </div>
@@ -367,7 +396,7 @@ div.csl-indent {
 </header>
 
 
-<p>Both <span class="citation" data-cites="Williams1970-WILTSA-2">(<a href="references.html#ref-Williams1970-WILTSA-2" role="doc-biblioref">Williams 1970</a>)</span> and <span class="citation" data-cites="Thomson2008-THOPAT-3">(<a href="references.html#ref-Thomson2008-THOPAT-3" role="doc-biblioref">Thomson 2008</a>)</span> resist the psychological criterion, but they use different reasons and draw on different resources. Williams relies on thought experiments designed to bring out important aspects of the phenomenology of anticipation, whereas Thomson appeals to the metaphysics of composition.</p>
+<p>Both <span class="citation" data-cites="Williams1970-WILTSA-2">(<a href="references.html#ref-Williams1970-WILTSA-2" role="doc-biblioref">Williams 1970</a>)</span> and <span class="citation" data-cites="Thomson2008-THOPAT-3">(<a href="references.html#ref-Thomson2008-THOPAT-3" role="doc-biblioref">Thomson 2008</a>)</span> resist the psychological criterion, and they both probe the evidence for the conceivability of certain cases in which persons are thought to swap bodies.</p>
 <section id="the-argument-from-anticipation" class="level2" data-number="15.1">
 <h2 data-number="15.1" class="anchored" data-anchor-id="the-argument-from-anticipation"><span class="header-section-number">15.1</span> The Argument from Anticipation</h2>
 <p><span class="citation" data-cites="Williams1970-WILTSA-2">(<a href="references.html#ref-Williams1970-WILTSA-2" role="doc-biblioref">Williams 1970</a>)</span> begins with two thought experiments:</p>
@@ -410,13 +439,151 @@ Case II
 </ul>
 </div>
 </div>
-<p>On the face of it, I should react to this development with terror, and the new layers of information provide no reason to feel better.</p>
-<p>Williams now adds a further twist. For he claims that Case I and Case II describe one and the same scenario from different perspectives.</p>
-<p>Case I describes the scenario from a <em>third-personal</em> perspective: A and B, but not me, are the subject of the experiment, and I conjecture that they will emerge as the B-body and A-body person respectively.</p>
-<p>Case II describes the scenario from a <em>first-order</em> personal perspective: <strong>I</strong> am A, and fear is an appropriate emotion to be directed to the A-body person, which suggests that fear tracks physical, and not psychological continuity.</p>
+<p>Two points:</p>
+<p>First, fear appears to be the appropriate response after each stage. The new layers of information provide no relief or reason to feel better about the prospects being described.</p>
+<p>Second, fear is only appropriate if we think we are able to <strong>survive</strong> all these changes while remaining in the same body. That is I fear for me as opposed to having fear for another person. So, the case appears to provide some evidence for the physical criterion of personal identity.</p>
+<p>Williams now adds a twist. For he claims that Case I and Case II describe one and the same scenario from different perspectives. Case I describes the scenario from a <em>third-personal</em> perspective: A and B, but not me, are the subject of the experiment, and I conjecture that they will emerge as the B-body and A-body person respectively.</p>
+<p>Case II describes the scenario from a <em>first-personal</em> perspective: <strong>I</strong> am A, and fear is an appropriate emotion to be directed to the A-body person, which suggests that fear tracks physical, and not psychological continuity. The other difference is that the description does not include an account of what happens to B, but it is unclear how mention of B should at all be relevant for the evaluation of the scenario. Knowledge of what happens to B will not alleviate the fear raised by the prospects I’m given.</p>
+<p>There is a <em>third-personal</em> description we should consider:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Case III
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A is informed that</p>
+<p>i. they will be subject to an operation producing total amnesia.</p>
+<p>ii. not only will the operation produce total amnesia, but it will in fact lead to changes in character.</p>
+<p>iii. along these changes in character, a new set of illusory memories will be induced in A.</p>
+<p>iv. along these changes in character, a new set of memories will be induced in A which will match experiences by another person B.</p>
+<p>v. the new memories will be extracted from the brain of B by a method that leaves B intact.</p>
+<p>vi. the new memories will be extracted from the brain of B, who will undergo the reverse operation.</p>
+</div>
+</div>
+<p>Much like before, fear seems to be the appropriate response to i through iii. Mention of B is introduced in iv, but it is not clear how it could make a difference: fear would seem to be the proper response to the situation described by iv. Nor do v or vi introduce a reason to be less afraid than in the earlier cases.</p>
+<p>One may perhaps be tempted to say that A cannot survive all of the cases described under i-vi. Maybe A can survive i but not vi, and, furthermore, it could be <em>indeterminate</em> whether A can survive some of the cases in between.</p>
+<blockquote class="blockquote">
+<p>It may intellectually comfort observers of A’s situation, but what is A supposed to make of it? To be told that a future situation is a borderline one for its being myself that is hurt, that is conceptually undecidable whether it will be me or not, it seems, I can do nothing with, it seems to have no comprehensible representation in my expectations and the emotions that go with them.</p>
+</blockquote>
 </section>
-<section id="the-argument-from-coincidence" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="the-argument-from-coincidence"><span class="header-section-number">15.2</span> The Argument from Coincidence</h2>
+<section id="thomson-on-the-bodily-criterion" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="thomson-on-the-bodily-criterion"><span class="header-section-number">15.2</span> Thomson on the Bodily Criterion</h2>
+<p>Thomson is interested in what she calls the bodily criterion for personal identity according to which what is necessary and sufficient for the continued existence of a person is the continuity of their body:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Bodily Criterion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(X\)</span> at <span class="math inline">\(t\)</span> is one and the same <em>person</em> as <span class="math inline">\(Y\)</span> at <span class="math inline">\(u\)</span> if and only if the body of <span class="math inline">\(X\)</span> at <span class="math inline">\(t\)</span> is spatio-temporally continuous with the body of <span class="math inline">\(Y\)</span> at <span class="math inline">\(u\)</span>.</p>
+</div>
+</div>
+<p>Thomson takes the main objection against the bodily criterion to come from <em>body-swap</em> scenarios, and, much like Williams, argues that they elicit a wide range of judgments.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Case IV
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>i. A and B are at t two people with different bodies.</p>
+<p>ii. They each have each their brain removed at some point after t.</p>
+<p>iii. The body of A and the brain of B are destroyed.</p>
+<p>iv. The brain of A is implanted in the body of B.</p>
+</div>
+</div>
+<p>The survivor will certainly think that she is A, as she is psychologically continuous and strongly connected to A. Most are inclined to judge:</p>
+<ol type="1">
+<li>The survivor at u is numerically identical with A at t.</li>
+<li>The body of the survivor at u is <strong>not</strong> numerically identical with the body of A at t.</li>
+</ol>
+<p>That seems a clear-cut counterexample to the physical criterion of personal identity. In fact:</p>
+<ol start="3" type="1">
+<li>The body of the survivor at u is numerically identical with the body of B at t.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Case V
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>i. A and B are at t two people with different bodies.</p>
+<p>ii. They each have each their brain removed at some point after t.</p>
+<p>iii. The body of A and the brain of B are destroyed.</p>
+<p>iv. The brain of A is <strong>implanted</strong> in the body of B.</p>
+<p><strong>v. The drugs administered to the body of B to prevent the rejection of the new brain turn out to have a radical effect on that brain so as to make its reconfiguration resemble the brain formerly located in the body of B.</strong></p>
+</div>
+</div>
+<p>Now, the survivor no longer thinks that she is A, as she is now psychologically continuous and strongly connected to B. So, Thomson suggests:</p>
+<ol type="1">
+<li>The survivor at u is numerically identical with B at t.</li>
+<li>The body of the survivor at u is numerically identical with the body of B at t.</li>
+</ol>
+<p>What we learn from the case, according to her, is that the only reason we are tempted to judge the first case as a body-swap case is because we think of the brain as the career of the psychology of a person. When we explicitly stipulate that the brain fails to do this, we are no longer inclined that the survivor at u is A at t.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Case VI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>i. A and B are at t two people with different bodies.</p>
+<p>ii. The brain of B is <strong>reprogrammed</strong> with the psychology of A at u.</p>
+<p>iii. Both the brain and body of A are destroyed at u.</p>
+</div>
+</div>
+<p>Who is the survivor at u? Much like in case IV, the survivor thinks that she is A, as she is psychologically continuous and strongly connected with A at t. Yet, there is no uniform judgment to be expected in this case. Some tend to say that the survivor at u is just A at t, whereas others appear to describe the situation as one in which B has become hopelessly disoriented. But it is unclear how the cases may call for a different treatment. A more principled answer would be to say that either both are body swap cases or none is.</p>
+<p>Thomson calls attention upon a distinction between two variants of the psychological criterion. While we have focused on what Thomson calls the <strong>wide psychological criterion</strong>, the alternative requires the psychological continuity and strong connectedness to be grounded in the continuity of one and the same brain.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Narrow Psychological Criterion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(X\)</span> at <span class="math inline">\(t\)</span> is one and the same <em>person</em> as <span class="math inline">\(Y\)</span> at <span class="math inline">\(u\)</span> if and only if (i) <span class="math inline">\(X\)</span> at <span class="math inline">\(t\)</span> is <em>psychologically continuous</em> with <span class="math inline">\(Y\)</span> at <span class="math inline">\(t\)</span>, (ii) this psychological continuity has the <em>right kind</em> of cause, (iii) this psychological continuity is <em>non-branching</em>, and (iv) the brain of <span class="math inline">\(X\)</span> and <span class="math inline">\(t\)</span> is spatiotemporally continuous with the brain of <span class="math inline">\(Y\)</span> at <span class="math inline">\(u\)</span>.</p>
+</div>
+</div>
+<p>If your judgment in Case VI is that the survivor at u is <strong>not</strong> one and the same person as A at t, then you should simply reject the wide psychological criterion in favor of the narrow variant, which, according to Thomson, is simply implausible. The best description of the case is one under which B has undergone a radical psychological change to the point of being utterly confused about its own identity. B now thinks that she is A, and shares the same attitudes A used to have about B.</p>
+<p>The prospects of duplication provide further evidence for that judgment.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Case VII
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>i. A, B, and C are at t three different people with different bodies.</p>
+<p>ii. The brains of B and C are both <strong>reprogrammed</strong> with the psychology of A at u.</p>
+<p>iii. Both the brain and body of A are destroyed at u.</p>
+</div>
+</div>
+<p>Who are the two survivors at u? Given the no-branching clause from the psychological criterion, we seem forced to say that none of them are identical to A at t. So, if A cares about personal identity, then A should do everything in her power to make sure one <em>reprogramming</em> is not successful.</p>
+<p>The bodily criterion, on the other hand, predicts that A at t does not survive the process, since the body of A at t is destroyed and no longer exists at u.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
