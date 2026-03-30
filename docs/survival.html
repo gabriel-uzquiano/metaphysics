@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>16&nbsp; Survival and Identity – Metaphysics</title>
+<title>17&nbsp; Survival and Identity – Metaphysics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -51,7 +51,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./freewill.html" rel="next">
-<link href="./psychological.html" rel="prev">
+<link href="./what-matters.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -89,6 +89,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -101,7 +130,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./personal.html">Personal Identity</a></li><li class="breadcrumb-item"><a href="./survival.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Survival and Identity</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./personal.html">Personal Identity</a></li><li class="breadcrumb-item"><a href="./survival.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Survival and Identity</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -266,8 +295,14 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./what-matters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">What Matters in Survival</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./survival.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Survival and Identity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Survival and Identity</span></span></a>
   </div>
 </li>
       </ul>
@@ -284,31 +319,31 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./freewill.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Free Will</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Free Will</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./fatalism.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Time Travel and Fatalism</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Time Travel and Fatalism</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./contextualism.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Contextualism and Ability</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Contextualism and Ability</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Ability and Counterfactuals</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Ability and Counterfactuals</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./frankfurt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Responsibility and the Ability to Do Otherwise</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Responsibility and the Ability to Do Otherwise</span></span></a>
   </div>
 </li>
       </ul>
@@ -325,7 +360,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
       </ul>
@@ -335,15 +370,26 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-r-relation-and-the-i-relation" id="toc-the-r-relation-and-the-i-relation" class="nav-link active" data-scroll-target="#the-r-relation-and-the-i-relation"><span class="header-section-number">17.1</span> The R-relation and the I-relation</a></li>
+  <li><a href="#fission-and-fusion" id="toc-fission-and-fusion" class="nav-link" data-scroll-target="#fission-and-fusion"><span class="header-section-number">17.2</span> Fission and Fusion</a>
+  <ul class="collapse">
+  <li><a href="#fission" id="toc-fission" class="nav-link" data-scroll-target="#fission"><span class="header-section-number">17.2.1</span> Fission</a></li>
+  <li><a href="#fusion" id="toc-fusion" class="nav-link" data-scroll-target="#fusion"><span class="header-section-number">17.2.2</span> Fusion</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./personal.html">Personal Identity</a></li><li class="breadcrumb-item"><a href="./survival.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Survival and Identity</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./personal.html">Personal Identity</a></li><li class="breadcrumb-item"><a href="./survival.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Survival and Identity</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Survival and Identity</span></h1>
+<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Survival and Identity</span></h1>
 </div>
 
 
@@ -360,14 +406,122 @@ div.csl-indent {
 </header>
 
 
-<p><span class="citation" data-cites="Lewis1983-LEWFSA-3">(<a href="references.html#ref-Lewis1983-LEWFSA-3" role="doc-biblioref">Lewis 1983</a>)</span></p>
+<p><span class="citation" data-cites="Lewis1983-LEWFSA-3">(<a href="references.html#ref-Lewis1983-LEWFSA-3" role="doc-biblioref">Lewis 1983</a>)</span> seeks to reconcile two answers to the question of what matters in survival. <span class="citation" data-cites="Parfit1984-PARRAP-15">(<a href="references.html#ref-Parfit1984-PARRAP-15" role="doc-biblioref">Parfit 1984</a>)</span> takes fission to support the incompatibility of two tentative responses to the question of what matters in survival.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Relation R is what matters in survival.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For a person <span class="math inline">\(X\)</span> at <span class="math inline">\(t\)</span> to have what matters in survival is for <span class="math inline">\(X\)</span> at <span class="math inline">\(t\)</span> to be psychologically strongly connected and continuous with <span class="math inline">\(Y\)</span> at a later time <span class="math inline">\(u\)</span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Identity is what matters in survival.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For a person <span class="math inline">\(X\)</span> at <span class="math inline">\(t\)</span> to have what matters in survival is for <span class="math inline">\(X\)</span> at <span class="math inline">\(t\)</span> to be numerically identical with a person <span class="math inline">\(Y\)</span> at a later time <span class="math inline">\(u\)</span>.</p>
+</div>
+</div>
+<p>In a case of fission, <span class="math inline">\(X\)</span> at <span class="math inline">\(t\)</span> is neither identical to <span class="math inline">\(Y\)</span> at <span class="math inline">\(u\)</span> or to <span class="math inline">\(Z\)</span> at <span class="math inline">\(u\)</span> even though it bears relation R to both <span class="math inline">\(Y\)</span> at <span class="math inline">\(u\)</span> and <span class="math inline">\(Z\)</span> at <span class="math inline">\(u\)</span>. Here is how Lewis reconstructs Parfit’s argument for the incompatibility of the two theses:</p>
+<ol type="1">
+<li>Identity is one-one, but Relation R may be one-many (or even many-one).</li>
+<li>Identity is all-or-nothing, but Relation R may fail to be all-or-nothing.</li>
+<li>Relation R matters in survival.</li>
+<li>Therefore, what matters in survival is not identity but rather Relation R.</li>
+</ol>
+<p>As Lewis points out, you could alternatively start with the premise that what matters in survival is Relation I to conclude that relation R is not what matters in survival. However, he is interested in the compatibility between the two thesis given at the outset. On the one hand, we can agree that what matters in survival is Relation R, which may be one-many or even many-one, and, on the other, we can agree with common sense that what matters in questions of personal identity is identity.</p>
+<section id="the-r-relation-and-the-i-relation" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="the-r-relation-and-the-i-relation"><span class="header-section-number">17.1</span> The R-relation and the I-relation</h2>
+<p>The key observation to make, for Lewis, is that personal identity and Relation R have different relata:</p>
+<ul>
+<li><p>Relation R relates person <em>stages</em>.</p>
+<p>When you wonder whether you will survive the teletransporter, you have in mind the question of whether a certain person stage in Mars (or Venus or both) are appropriately R-related to your current stage.</p></li>
+<li><p>Identity relates <em>temporally extended persons</em>.</p>
+<p>When you wonder whether you will identical to someone on Mars after teletransportation, you have in mind whether you, as a temporally extended continuant, are identical to a temporally extended continuant that includes some future person stages in Mars (or Venus or both).</p></li>
+</ul>
+<p>Since they have different relata, it is not clear that the answers are in fact comparable. But personal identity induces a relation on person stages. So, to facilitate comparison, we may focus on yet another relation on stages:</p>
+<ul>
+<li><p>Relation I relates person stages if, and only if, they belong to one and the same temporally extended person.</p>
+<p>To be I-related to a future stage after teletransportation is for there to be a temporally extended person which includes both the current and that future person stages as parts.</p></li>
+</ul>
+<p>Once we do this, we may note:</p>
+<ol type="1">
+<li>Relation I may be one-many (or even many-one).</li>
+<li>Relation I may fail to be all-or-nothing.</li>
+</ol>
+<p>So, for all we know, Relation I and Relation R may happen to coincide. Indeed, Lewis is keen to argue:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The I-Relation is the R-Relation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A person stage is I-related and R-related to exactly the same stages.</p>
+</div>
+</div>
+<p>This raises the question of what exactly is a person. On the one hand, a continuant person is an aggregate of I-interrelated person-stages. But not every such aggregate is a person, since we should exclude proper parts of such aggregates of I-interrelated stages. All of my twenty-first century stages are I-interrelated, but they do not form a person, they are at most a proper part of one.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Persons are maximal aggregates of I- and R-interrelated stages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A person is just a <em>maximal</em> I-interrelated aggregate of person-stages.</p>
+<p>Furthermore:</p>
+<p><span class="math inline">\(X\)</span> is a person if, and only if, <span class="math inline">\(X\)</span> is a maximal R-interrelated aggregate of person-stages. That is, <span class="math inline">\(X\)</span> is both an R-interrelated aggregate of person-stages, and <span class="math inline">\(X\)</span> is not a proper part of an R-interrelated aggregate of person-stages.</p>
+</div>
+</div>
+</section>
+<section id="fission-and-fusion" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="fission-and-fusion"><span class="header-section-number">17.2</span> Fission and Fusion</h2>
+<p>We are now in a position to reassess cases in which the I-Relation fails to be one-one. Fission provides cases in which the I-Relation is one-many, and fusion provides examples in which the I-Relation is many-one.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-4256540531.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<section id="fission" class="level3" data-number="17.2.1">
+<h3 data-number="17.2.1" class="anchored" data-anchor-id="fission"><span class="header-section-number">17.2.1</span> Fission</h3>
+<p>In cases of fission, we start with a prefission stage <span class="math inline">\(S\)</span> at <span class="math inline">\(t_0\)</span>, which is R-related forward to two different simultaneous postfission stages <span class="math inline">\(S_1\)</span> and <span class="math inline">\(S_2\)</span> at <span class="math inline">\(t_1\)</span>. The forward R-elation is one-many, and the backward R-relation is many-one. Furthermore, the R-relation is not transitive because <span class="math inline">\(S_1\)</span> is R-related to <span class="math inline">\(S\)</span>, which is R-related to <span class="math inline">\(S_2\)</span>, yet <span class="math inline">\(S_1\)</span> is not R-related to <span class="math inline">\(S_2\)</span>.</p>
+<p>Identity is transitive, but the I-relation is not identity. Nor is the I-relation transitive once we notice that there are at least two different continuant persons involved: <span class="math inline">\(C_1\)</span> and <span class="math inline">\(C_2\)</span>. Much like before, <span class="math inline">\(S_1\)</span> is I-related to <span class="math inline">\(S\)</span> via <span class="math inline">\(C_1\)</span>, which is I-related to <span class="math inline">\(S_2\)</span> via <span class="math inline">\(C_2\)</span>, yet <span class="math inline">\(S_1\)</span> is not I-related to <span class="math inline">\(S_2\)</span>.</p>
+<p>Both continuant persons <span class="math inline">\(C_1\)</span> and <span class="math inline">\(C_2\)</span> overlap, but notice that the common proper part, while an aggregate of I-interrelated person stages, is <em>not</em> itself a person, since it is not maximal. The common section is a proper part of two different maximal aggregates of I-interrelated person stages.</p>
+<p>So, we had two different persons all along, who share all of their prefission person stages.</p>
+</section>
+<section id="fusion" class="level3" data-number="17.2.2">
+<h3 data-number="17.2.2" class="anchored" data-anchor-id="fusion"><span class="header-section-number">17.2.2</span> Fusion</h3>
+<p>In cases of fusion, we start with two prefusion stages <span class="math inline">\(S_1\)</span> and <span class="math inline">\(S_2\)</span> at $t_0$, which are R-related forward to a single postfusion stage <span class="math inline">\(S\)</span> at <span class="math inline">\(t_1\)</span>. The forward R-elation is many-one, and the backward R-relation is one-many. Furthermore, the R-relation is not transitive because <span class="math inline">\(S_1\)</span> is R-related to <span class="math inline">\(S\)</span>, which is R-related to <span class="math inline">\(S_2\)</span>, yet <span class="math inline">\(S_1\)</span> is not R-related to <span class="math inline">\(S_2\)</span>.</p>
+<p>The I-relation is not transitive either. We have two continuant persons <span class="math inline">\(C_1\)</span> and <span class="math inline">\(C_2\)</span>, which begin to overlap after fusion. The common section is a proper part of two different maximal aggregates of I-interrelated person stages, and therefore not itself a person.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-Lewis1983-LEWFSA-3" class="csl-entry" role="listitem">
 Lewis, David. 1983. <span>“Survival and Identity.”</span> In <em>Philosophical Papers Volume i</em>, edited by David Lewis, 55–77. Oxford University Press.
 </div>
+<div id="ref-Parfit1984-PARRAP-15" class="csl-entry" role="listitem">
+Parfit, Derek. 1984. <em>Reasons and Persons</em>. Oxford University Press.
 </div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -789,13 +943,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./psychological.html" class="pagination-link" aria-label="Against the Psychological Criterion">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Against the Psychological Criterion</span></span>
+      <a href="./what-matters.html" class="pagination-link" aria-label="What Matters in Survival">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">What Matters in Survival</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./freewill.html" class="pagination-link" aria-label="Free Will">
-        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Free Will</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Free Will</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
