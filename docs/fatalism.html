@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>19&nbsp; Time Travel and Fatalism – Metaphysics</title>
+<title>19&nbsp; Fatalism – Metaphysics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -69,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./freewill.html">Free Will</a></li><li class="breadcrumb-item"><a href="./fatalism.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Time Travel and Fatalism</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./freewill.html">Free Will</a></li><li class="breadcrumb-item"><a href="./fatalism.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fatalism</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -276,7 +325,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./fatalism.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Time Travel and Fatalism</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fatalism</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -321,15 +370,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-sea-battle-argument" id="toc-the-sea-battle-argument" class="nav-link active" data-scroll-target="#the-sea-battle-argument"><span class="header-section-number">19.1</span> The Sea Battle Argument</a>
+  <ul class="collapse">
+  <li><a href="#excluded-middle" id="toc-excluded-middle" class="nav-link" data-scroll-target="#excluded-middle"><span class="header-section-number">19.1.1</span> Excluded Middle</a></li>
+  <li><a href="#ambiguity" id="toc-ambiguity" class="nav-link" data-scroll-target="#ambiguity"><span class="header-section-number">19.1.2</span> Ambiguity?</a></li>
+  </ul></li>
+  <li><a href="#the-idle-argument" id="toc-the-idle-argument" class="nav-link" data-scroll-target="#the-idle-argument"><span class="header-section-number">19.2</span> The Idle Argument</a></li>
+  <li><a href="#affecting-the-future" id="toc-affecting-the-future" class="nav-link" data-scroll-target="#affecting-the-future"><span class="header-section-number">19.3</span> Affecting the Future</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./freewill.html">Free Will</a></li><li class="breadcrumb-item"><a href="./fatalism.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Time Travel and Fatalism</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./freewill.html">Free Will</a></li><li class="breadcrumb-item"><a href="./fatalism.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fatalism</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Time Travel and Fatalism</span></h1>
+<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fatalism</span></h1>
 </div>
 
 
@@ -346,8 +407,182 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>We used the insight that the time traveler cannot change the past to motivate the fatalist line of argument according to which <strong>we cannot change the future</strong>. If we cannot change the future, then, the fatalist suggests, we have no control over future events and efforts to make a difference will be futile. The fatalist argument may be traced back to the Greeks, but the main thought seems to have been present in Aristotle.</p>
+<section id="the-sea-battle-argument" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="the-sea-battle-argument"><span class="header-section-number">19.1</span> The Sea Battle Argument</h2>
+<p>Aristotle is well-known for the Sea Battle argument:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Sea Battle Argument
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Either it is now true that there will be a sea battle tomorrow or it is now true that there will be a sea battle tomorrow.</li>
+<li>If it is now true that there will be a sea battle tomorrow, then it is necessary that there will be a sea battle tomorrow.</li>
+<li>If it is now true that there will not be a sea battle tomorrow, then it is necessary that there will not be a sea battle tomorrow.</li>
+<li>So, it is either necessary that there will be a sea battle tomorrow or necessary that there will not be a sea battle tomorrow.</li>
+</ol>
+</div>
+</div>
+<p><span class="citation" data-cites="co-fat">(<a href="references.html#ref-co-fat" role="doc-biblioref">Conee and Sider 2005</a>)</span> points out that the fatalist conclusion is much more general:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Fatalism
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Whatever will happen will necessarily happen.</p>
+</div>
+</div>
+<p>Notice that having a battle involves choice, but the fatalist conclusion threatens the thought that there are free choices over which we have control. If it is now true that we will choose to have a sea battle tomorrow, then it is necessary that we choose to have a sea battle tomorrow and free choice is an illusion.</p>
+<section id="excluded-middle" class="level3" data-number="19.1.1">
+<h3 data-number="19.1.1" class="anchored" data-anchor-id="excluded-middle"><span class="header-section-number">19.1.1</span> Excluded Middle</h3>
+<p>One objection to the Sea Battle argument is that we should not accept the first premise, which is an instance of the Law of Excluded Middle:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Excluded Middle
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>No matter what statement <span class="math inline">\(S\)</span> may be, either it is true that <span class="math inline">\(S\)</span> or is true that not-<span class="math inline">\(S\)</span>.</p>
+</div>
+</div>
+<p>The justification for this principle is that there is no third option between <span class="math inline">\(S\)</span> being the case and not-<span class="math inline">\(S\)</span> being the case. But some have objected that while Excluded Middle is perfectly appropriate for <em>settled</em> statements of fact, it is not sound for <em>open</em> statements about the future. Consider, for example, a proponent of the Growing Block theory according to which present and past facts are settled but future facts are genuinely open. If there is no fact of the matter as to whether there will be a sea battle tomorrow, then it is neither true now that there will be one nor true now that there will not be one.</p>
+<p>This, however, is not a way out for B-theorists for whom future facts are settled in much the way in which past and present facts are. Since Excluded Middle applies to settled facts, they apply to future facts and premise one is true.</p>
+</section>
+<section id="ambiguity" class="level3" data-number="19.1.2">
+<h3 data-number="19.1.2" class="anchored" data-anchor-id="ambiguity"><span class="header-section-number">19.1.2</span> Ambiguity?</h3>
+<p>One more response is to provide a reinterpretation of the second and third premises:</p>
+<ul>
+<li><p>It is necessary that if it is now true that there will be a sea battle tomorrow, then there will be a sea battle tomorrow.</p></li>
+<li><p>It is necessary that if it is now not true that there will be a sea battle tomorrow, then there will not be a sea battle tomorrow.</p></li>
+</ul>
+<p>That reinterpretation does not license the inference to the conclusion that it is necessary that there will be a sea battle tomorrow or necessary that there will not be a sea battle tomorrow. That is, the premises are perfectly consistent with the fact that there will (or not) be a sea battle tomorrow is <em>contingent</em> and not at all necessary.</p>
+</section>
+</section>
+<section id="the-idle-argument" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="the-idle-argument"><span class="header-section-number">19.2</span> The Idle Argument</h2>
+<p><span class="citation" data-cites="Bobzien1998-BOBFAA">(<a href="references.html#ref-Bobzien1998-BOBFAA" role="doc-biblioref">Bobzien 1998</a>)</span> describes a version of the fatalist argument that builds on the conclusion of the Sea Battle argument. The argument is sometimes known as the Idle Argument.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Idle Argument
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>If it is necessary that you will recover from this illness, then, regardless of whether you consult a doctor or you do not consult a doctor, you will recover.</li>
+<li>If it is necessary that you will <strong>not</strong> recover from this illness, then, regardless of whether you consult a doctor or you do not consult a doctor, you will <strong>not</strong> recover.</li>
+<li>Either it is necessary that you will recover from your illness or it is necessary that you will not recover from your illness.</li>
+<li>Therefore, it is futile to consult a doctor.</li>
+</ol>
+</div>
+</div>
+<p>The third premise follows the pattern of the conclusion of the Sea Battle argument, but the concern now is that the argument may well lead to idleness. When confronted with the argument, someone who is sick may choose to abstain from consulting a doctor because they think there is no use in doing so. Compare with the effects Predictor appears to have on its users in the scenario depicted by Ted Chiang in <em>What’s Expected of Us</em>.</p>
+<p>In line with <span class="citation" data-cites="Bobzien1998-BOBFAA">(<a href="references.html#ref-Bobzien1998-BOBFAA" role="doc-biblioref">Bobzien 1998</a>)</span>, the argument is perfectly general:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Idle Argument Schema
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>If it is necessary that <span class="math inline">\(A\)</span>, then, whether or not you <span class="math inline">\(\varphi\)</span>, <span class="math inline">\(A\)</span>.</li>
+<li>If it is necessary that not-<span class="math inline">\(A\)</span>, then, whether or not you <span class="math inline">\(\varphi\)</span>, not-<span class="math inline">\(A\)</span>.</li>
+<li>Either it is necessary that <span class="math inline">\(A\)</span> or it is necessary that not-<span class="math inline">\(A\)</span>.</li>
+<li>Therefore, with regard to <span class="math inline">\(A\)</span>, it is futile to <span class="math inline">\(\varphi\)</span>.</li>
+</ol>
+</div>
+</div>
+<p>Is the idle argument valid? Strictly speaking, what follows from premises 1 through 3 is:</p>
+<ul>
+<li>Either, whether or not you <span class="math inline">\(\varphi\)</span>, <span class="math inline">\(A\)</span> or, whether or not you <span class="math inline">\(\varphi\)</span>, not-<span class="math inline">\(A\)</span>.</li>
+</ul>
+<p>To infer the conclusion, we would need a further premise of the form:</p>
+<ul>
+<li>If either, whether or not you <span class="math inline">\(\varphi\)</span>, <span class="math inline">\(A\)</span> or, whether or not you <span class="math inline">\(\varphi\)</span>, not-<span class="math inline">\(A\)</span>, then it is futile to <span class="math inline">\(\varphi\)</span>.</li>
+</ul>
+</section>
+<section id="affecting-the-future" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="affecting-the-future"><span class="header-section-number">19.3</span> Affecting the Future</h2>
+<p>We made a distinction between the time traveler’s inability to change the past and his ability to play a causal role in how the past unfolds. There is, on the face of it, a similar distinction available to us in connection to the future. Even if the future is fixed and unalterable, we should acknowledge the distinction between changing the future, which we cannot do, and affecting it, which is just to play a causal role in how it unfolds.</p>
+<p>Consider the first premise of the Idle Argument:</p>
+<ol type="1">
+<li>If it has been true that I will write a book over the summer, then whether or not I set some time aside for writing, I will write a book over the summer.</li>
+</ol>
+<p>This is a conditional, whose antecedent is:</p>
+<ul>
+<li>It has been true that I will write a book over the summer,</li>
+</ul>
+<p>and whose consequent is:</p>
+<ul>
+<li>If I do not set time aside for writing, and I will write a book over the summer, and if I set time aside for writing, then I will write a book over the summer.</li>
+</ul>
+<p>This suggests that setting time aside for writing would be <strong>causally inert</strong>, since the writing will take place whether or not I set time aside for writing. But it pays to look at the first conjunct with some care:</p>
+<ul>
+<li>If I do not set time aside for writing, then I will write a book over the summer.</li>
+</ul>
+<p>This is <strong>false</strong> on a common approach to the evaluation of indicative conditionals, and its falsity is what suggests that setting aside time for writing may (and perhaps will) play a causal role in the outcome.</p>
+<p>Here is a common approach for the evaluation of conditionals:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Indicative Conditionals
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An indicative conditional of the form</p>
+<p>if <span class="math inline">\(\varphi\)</span>, then <span class="math inline">\(\psi\)</span></p>
+<p>is true at a world of evaluation <span class="math inline">\(w\)</span> relative to a context <span class="math inline">\(C\)</span> if, and only if,</p>
+<p>all nearby <span class="math inline">\(\varphi\)</span>-worlds are <span class="math inline">\(\psi\)</span>-worlds.</p>
+</div>
+</div>
+<p>Consider the conditional</p>
+<ul>
+<li>If I release the piece of chalk, it will fall.</li>
+</ul>
+<p>On the present approach, the conditional is true <em>because</em> all nearby worlds at which I drop the chalk are worlds at which it falls to the ground. This is of course the case even if there are remote worlds in which the chalk draws a different trajectory upon release.</p>
+<p>Let us now consider the conditional:</p>
+<ul>
+<li>if I do not set aside time for writing, I will write a book over the summer.</li>
+</ul>
+<p>It is just not true that all nearby worlds at which I do not set aside time for writing are worlds at which I write a book. If anything, setting aside time for writing would seem to make a difference as to whether I write the book or not over the summer. So, by setting aside time for writing, I can causally influence the future. This, much like in the case of the time traveler, is not to say that I can change the future. It is rather that whatever actions I decide to undertake now will make a difference as to how the future unfolds, and to that extent, I do seem to enjoy at least some control over the future.</p>
+<p>There is a wrinkle. The conditional rings true when embedded in the larger conditional, whose antecedent is the claims that it is now true that it is now true that I will write a book tomorrow. Why is that?</p>
+<p>The answer has to do with the mechanics of evaluation of conditionals at a given context <span class="math inline">\(C\)</span>. When we evaluate a conditional at a context, we consider only worlds that are compatible with the common ground among speakers. So, in a context in which we presuppose that I will write a book over the summer, we consider only worlds that are compatible with that outcome, and indeed, when we do that it seems plausible to claim that all nearby worlds in which i do not set time aside for writing <strong>and I write a book over the summer</strong> are worlds in which I write a book over the summer. That by itself is no reason to deny that my setting time aside for writing will not play a crucial causal role for the outcome.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Bobzien1998-BOBFAA" class="csl-entry" role="listitem">
+Bobzien, Susanne. 1998. <span>“Fate, Action, and Motivation: The Idle Argument.”</span> In <em>Determinism and Freedom in Stoic Philosophy</em>, edited by Susanne Bobzien. Oxford University Press.
+</div>
+<div id="ref-co-fat" class="csl-entry" role="listitem">
+Conee, Earl, and Theodore Sider. 2005. <span>“"Riddles of Existence: A Guided Tour of Metaphysics".”</span> In. Oxford University Press.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
