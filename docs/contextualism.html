@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ability.html" rel="next">
+<link href="./consequence.html" rel="next">
 <link href="./fatalism.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -69,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -287,14 +336,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Ability and Counterfactuals</span></span></a>
+  <a href="./consequence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The Consequence Argument</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./compatibilism.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Are We Free to Break the Laws?</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./frankfurt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Responsibility and the Ability to Do Otherwise</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Responsibility and the Ability to Do Otherwise</span></span></a>
   </div>
 </li>
       </ul>
@@ -311,7 +366,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
       </ul>
@@ -321,8 +376,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#ability-and-free-will" id="toc-ability-and-free-will" class="nav-link active" data-scroll-target="#ability-and-free-will"><span class="header-section-number">20.1</span> Ability and Free Will</a>
+  <ul class="collapse">
+  <li><a href="#tim-and-grandfather-revisited" id="toc-tim-and-grandfather-revisited" class="nav-link" data-scroll-target="#tim-and-grandfather-revisited"><span class="header-section-number">20.1.1</span> Tim and Grandfather, Revisited</a></li>
+  </ul></li>
+  <li><a href="#contextualism" id="toc-contextualism" class="nav-link" data-scroll-target="#contextualism"><span class="header-section-number">20.2</span> Contextualism</a></li>
+  <li><a href="#vihvelins-challenge-the-counterfactual-principle" id="toc-vihvelins-challenge-the-counterfactual-principle" class="nav-link" data-scroll-target="#vihvelins-challenge-the-counterfactual-principle"><span class="header-section-number">20.3</span> Vihvelin’s Challenge: The Counterfactual Principle</a>
+  <ul class="collapse">
+  <li><a href="#the-fatalist-echo" id="toc-the-fatalist-echo" class="nav-link" data-scroll-target="#the-fatalist-echo"><span class="header-section-number">20.3.1</span> The Fatalist Echo</a></li>
+  <li><a href="#similarity-and-counterfactuals" id="toc-similarity-and-counterfactuals" class="nav-link" data-scroll-target="#similarity-and-counterfactuals"><span class="header-section-number">20.3.2</span> Similarity and Counterfactuals</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -346,8 +416,218 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>We used the distinction between changing the future and affecting the future in order to defuse the fatalist threat. From the assumption that the future is fixed, the fatalist inferred that our actions are causally inert. But we pointed out that even if the future is fixed, our actions may still play a genuine causal role in how it unfolds.</p>
+<p>But the discussion left a residual question on the table. Suppose it is now true that I will not write a book over the summer. I may well affect the future in that my actions will play some causal role in how the future develops. But the question remains: <strong>can I write a book over the summer?</strong> The fatalist argument failed, but one may now wonder whether I have genuine abilities that extend beyond what I will actually do? This question matters because the debate over free will is often framed in these terms.</p>
+<section id="ability-and-free-will" class="level2" data-number="20.1">
+<h2 data-number="20.1" class="anchored" data-anchor-id="ability-and-free-will"><span class="header-section-number">20.1</span> Ability and Free Will</h2>
+<p><span class="citation" data-cites="Inwagen1975-INWTIO">(<a href="references.html#ref-Inwagen1975-INWTIO" role="doc-biblioref">Inwagen 1975</a>)</span>, whose argument we will examine in detail, makes the connection explicit:</p>
+<blockquote class="blockquote">
+<p>It seems to be generally agreed that the concept of free will should be understood in terms of the <em>power</em> or <em>ability</em> of agents to act otherwise than they in fact do. To deny that men have free will is to assert that what a man <em>does</em> do and what he <em>can</em> do coincide. And almost all philosophers agree that a necessary condition for holding an agent responsible for an act is believing that that agent <em>could have</em> refrained from performing that act.</p>
+</blockquote>
+<p>If you have free will, then faced with a simple choice such as, for example, to raise your hand or to put it back on the table, you <em>can</em> raise your hand and you <em>can</em> put it back on the table even if it is now true that you will do one and not the other. That is, given the choice, you raise your hand <em>freely</em> just in case:</p>
+<ol type="1">
+<li>You raise your hand.</li>
+<li>You can raise your hand.</li>
+<li>You can put your hand back ont he table.</li>
+</ol>
+<p>But what exactly is for you to have the ability to <span class="math inline">\(\varphi\)</span> or to not- <span class="math inline">\(\varphi\)</span> given that you will do one but not the other? To clarify this, it will be helpful to look at David Lewis’ treatment of the time travel scenario, since it delivers a remarkably helpful account of ability.</p>
+<section id="tim-and-grandfather-revisited" class="level3" data-number="20.1.1">
+<h3 data-number="20.1.1" class="anchored" data-anchor-id="tim-and-grandfather-revisited"><span class="header-section-number">20.1.1</span> Tim and Grandfather, Revisited</h3>
+<p>Compare again with the scenario <span class="citation" data-cites="Lewis1976-LEWTPO-8">(<a href="references.html#ref-Lewis1976-LEWTPO-8" role="doc-biblioref">Lewis 1976</a>)</span> describes. Consider a time at which conditions are optimal and Tim faces the decision to kill or not kill Grandfather. Since we know that Grandfather died in bed in 1957, we know this:</p>
+<ul>
+<li><p>Tim did not kill Grandfather.</p></li>
+<li><p>Tim <em>can</em> fail to kill Grandfather.</p></li>
+</ul>
+<p>But on the face of it, for Tim’s action to count as free, we should be able to attribute to Tim the ability to kill Grandfather:</p>
+<ul>
+<li>Tim can kill Grandfather.</li>
+</ul>
+<p>This seems doubtful, however, given that it is part of the historical record that Grandfather survived. To kill Grandfather would be to change the past, which we have established to be impossible. So it seems that the last claim is false. But then Tim’s situation looks very much like someone with no free will at all. There is no difference between what he can do and what he does.</p>
+<p>This is why the time travel scenario is of help here. It provides a vivid, controlled version of the very pressure that fatalism and determinism apply to ordinary agents. If we manage to explain what it means for Tim to <em>can</em> kill Grandfather despite the historical record, then we will have made progress on the general question.</p>
+</section>
+</section>
+<section id="contextualism" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="contextualism"><span class="header-section-number">20.2</span> Contextualism</h2>
+<p>When <span class="citation" data-cites="Lewis1976-LEWTPO-8">(<a href="references.html#ref-Lewis1976-LEWTPO-8" role="doc-biblioref">Lewis 1976</a>)</span> describes the case, he sets the reader up for two different verdicts.</p>
+<ul>
+<li><p><strong>By ordinary standards</strong>, Tim <em>can</em> kill Grandfather.</p>
+<p>Tim has all the necessary skills, the opportunity, the best rifle money can buy, perfect weather conditions, etc.</p></li>
+<li><p><strong>By stricter standards</strong>, Tim <em>cannot</em> kill Grandfather.</p>
+<p>It is part of the historical record that Grandfather died in bed in 1957, and therefore it is part of the historical record that Tim did <em>not</em> kill Grandfather. To kill Grandfather would require Tim to change the past, which is impossible.</p></li>
+</ul>
+<p>So, we have reason to accept to apparently contradictory statements:</p>
+<ol type="1">
+<li><p>Tim can kill Grandfather.</p></li>
+<li><p>Tim cannot kill Grandfather.</p></li>
+</ol>
+<p><span class="citation" data-cites="Lewis1976-LEWTPO-8">(<a href="references.html#ref-Lewis1976-LEWTPO-8" role="doc-biblioref">Lewis 1976</a>)</span> responds that there is no context in which we are tempted by <em>both</em> judgments, and the reason for this is that ability attributions are context-sensitive. In this respect at least, ‘can’ behaves much like other contextually sensitive expressions. Compare with the behavior of quantifier expressions such as ‘everything’:</p>
+<ul>
+<li><p><strong>By ordinary standards</strong>, I packed everything for my flight.</p>
+<p>I packed all my clothes, my computer, and every other item I intended to bring with me for my flight.</p></li>
+<li><p><strong>By stricter standards</strong>, I did not pack everything for my flight.</p>
+<p>I did not pack my books, my furniture, my bicycle etc.</p></li>
+</ul>
+<p>That means that there are contexts in which we would accept one but not the other statement:</p>
+<ol start="3" type="1">
+<li><p>I packed everything for my flight.</p></li>
+<li><p>I did not pack everything for my flight.</p></li>
+</ol>
+<p>When we evaluate statements like 3 or 4, we should be mindful of the context <span class="math inline">\(C\)</span> in which they are made, since the context will generally determine the appropriate domain of quantification. In a context in which we review my travel plans, the domain of quantification will be restricted to the items I intend to bring with me in my travels, but other contexts may determine a broader domain of quantification.</p>
+<p>There is a link between quantification and modality, since you may take modal statements to implicitly quantify over possible worlds:</p>
+<ol start="5" type="1">
+<li><p>David can speak Finnish.</p>
+<p>It is possible that David speaks Finnish.</p>
+<p>There are possible worlds in which David speaks Finish.</p></li>
+<li><p>David cannot speak Finnish.</p>
+<p>It is <em>not</em> possible that David speaks Finnish.</p>
+<p>There are <em>no</em> possible worlds in which David speaks Finnish.</p></li>
+</ol>
+<p>The relevant domain of worlds is made salient by the context in which the statements are made. In a context <span class="math inline">\(C_1\)</span> in which we compare David’s abilities to those of other animals, we may hold fixed certain physiological and anatomical facts and facts to do with the human larynx and nervous system. Because there are worlds in which those facts obtain and David does indeed speak Finnish, we are inclined to judge that he can speak Finnish.</p>
+<p>On the other hand, in a context <span class="math inline">\(C_2\)</span> in which we compare David’s abilities to those of a native Finnish speaker, we may hold fixed the fact that David has no experience whatever with Finnish and the fact that he has no facility for new languages. Because there are no worlds in which those facts obtain and David speaks Finnish, we are inclined to judge that David cannot speak Finnish.</p>
+<p>The general principle <span class="citation" data-cites="Lewis1976-LEWTPO-8">(<a href="references.html#ref-Lewis1976-LEWTPO-8" role="doc-biblioref">Lewis 1976</a>)</span> deploys is this:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contextualism and Ability
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(S\)</span> <strong>can</strong> <span class="math inline">\(\varphi\)</span> is true at a context <span class="math inline">\(C\)</span> if, and only if, the fact that <span class="math inline">\(S\)</span> performs <span class="math inline">\(\varphi\)</span> is <strong>compossible</strong> with the set of facts that we hold fixed at <span class="math inline">\(C\)</span>.</p>
+</div>
+</div>
+<p>There is similarly no contradiction involved in our judgments that Tim can and cannot kill Grandfather, since they are made in different contexts relative to different sets of contextually salient facts.</p>
+<ol type="1">
+<li><p>Tim can kill Grandfather.</p>
+<p>It is possible that Tim kills Grandfather.</p>
+<p>There are possible worlds in which Tim kills Grandfather.</p></li>
+</ol>
+<p>This is true in a context <span class="math inline">\(C_1\)</span> in which we hold fixed the fact that Tim has all the necessary skills, the opportunity, the best rifle money can buy, perfect weather conditions, etc. Crucially, we do <strong>not</strong> hold fixed the fact that Tim did not kill Grandfather.</p>
+<ol start="2" type="1">
+<li><p>Tim cannot kill Grandfather.</p>
+<p>It is <em>not</em> possible that Tim kills Grandfather.</p>
+<p>There are <em>no</em> possible worlds in which Tim kills Grandfather.</p></li>
+</ol>
+<p>This is true in a context <span class="math inline">\(C_2\)</span> in which we hold fixed the fact that Tim did not kill Grandfather. <strong>No worlds in which Tim killed Grandfather are compossible with worlds in which Tim did not kill Grandfather.</strong></p>
+<p>This provides another line of response to the fatalist argument. For we are now in a position to explain our ambivalence toward the statements below when we hold fixed certain future facts.</p>
+<ol start="7" type="1">
+<li><p>I can write a book over the summer.</p>
+<p>It is possible that I write a book over the summer.</p>
+<p>There are possible worlds in which I write a book over the summer.</p></li>
+</ol>
+<p>This is true in a context <span class="math inline">\(C_1\)</span> in which we hold fixed the fact that I have all the necessary skills, the time and opportunity to write a book, etc. Crucially, we do <strong>not</strong> hold fixed the fact that I will not write a book over the summer.</p>
+<ol start="7" type="1">
+<li><p>I cannot write a book over the summer.</p>
+<p>It is not possible that I write a book over the summer.</p>
+<p>There are possible worlds in which I write a book over the summer.</p></li>
+</ol>
+<p>This is true in a context <span class="math inline">\(C_2\)</span> in which we hold fixed the fact that I will not write a book over the summer. <strong>No worlds in which I write a book over the summer are compossible with worlds in which I will not write a book over the summer.</strong></p>
+</section>
+<section id="vihvelins-challenge-the-counterfactual-principle" class="level2" data-number="20.3">
+<h2 data-number="20.3" class="anchored" data-anchor-id="vihvelins-challenge-the-counterfactual-principle"><span class="header-section-number">20.3</span> Vihvelin’s Challenge: The Counterfactual Principle</h2>
+<p><span class="citation" data-cites="Vihvelin1996-VIHWTT">(<a href="references.html#ref-Vihvelin1996-VIHWTT" role="doc-biblioref">Vihvelin 1996</a>)</span> raises a concern for the contextual account of ability. She continues to focus on a time travel scenario:</p>
+<blockquote class="blockquote">
+<p>Suppose that [a] time traveler, unhappy with her life, decides that it would have been better never to have lived it. She packs a gun and travels back through time, determined to kill her infant self. She picks a time when she knows that the baby will be alone. She checks carefully to make sure her gun is loaded. She fires. She misses. She fires again. This time the gun jams.</p>
+</blockquote>
+<p>We know that the time traveler’s efforts will all fail. Call her Suzy, and her infant self Baby Suzy. Since Suzy’s survival is what makes the time journey possible in the first place, Baby Suzy must live. Suzy cannot kill Baby Suzy, since this would be a self-defeating act. Yet by ordinary standards, Suzy has the ability to shoot close-range targets and plenty of opportunity. So it seems both that she can and that she cannot kill Baby Suzy.</p>
+<p>In premise-conclusion form, this appears to be a variant argument against the possibility of backward time travel:</p>
+<ol type="1">
+<li>If If backward time travel were possible, then it would be possible for Suzy to kill Baby Suzy.</li>
+<li>It is impossible to for Suzy to kill Baby Suzy.</li>
+<li>Backward time travel is not possible.</li>
+</ol>
+<p>We know what Lewis’s contextualist reply to this argument is supposed to be. There are contexts in which we judge that it is possible for Suzy to kill Baby Suzy, namely, contexts in which we hold fixed Suzy’s necessary skills and the fact that she had opportunity to pull the trigger. The fact that Suzy kills Baby Suzy is indeed compossible with the contextually salient facts. So, if backward time travel were possible, then it would be possible for Suzy to kill Baby Suzy by ordinary standards. But by ordinary standards, 2 would be false.</p>
+<p>On the other hand, there are contexts in which we judge that it is impossible for Suzy to kill Baby Suzy because they are contexts in which we hold fixed the fact that Baby Suzy will eventually grow to become Suzy and travel back in time. No worlds in which Suzy kills Baby Suzy are worlds in which Baby Suzy eventually grows into Suzy. So, it is not true that if backward time travel were possible, then it would be possible for Suzy to kill Baby Suzy <em>all things considered</em>. On the other hand, 2 is true <em>all things considered</em>. At the end of the day, there is no uniform interpretation of ‘can’ on which premise 1 and 2 both come out true. One interpretation makes 1 true and 2 false, whereas the other makes 1 false and 2 true.</p>
+<p><span class="citation" data-cites="Vihvelin1996-VIHWTT">(<a href="references.html#ref-Vihvelin1996-VIHWTT" role="doc-biblioref">Vihvelin 1996</a>)</span> rejects this response. Her objection is not to Lewis’ characterization of the relevant contexts, it is rather that she rejects his account of ability even by ordinary standards. She relies on a perfectly general principle:</p>
+<blockquote class="blockquote">
+<p>We should agree that someone can do something, in the relevant sense, only if it’s true that if she tried to do it, she would or at least might succeed. And everyone should agree that if someone would fail to do something, no matter how hard or how many times she tried, then she cannot do it.</p>
+</blockquote>
+<p>The objection takes the form of a completely general principle:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Counterfactual Principle
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Necessarily, if someone <strong>would</strong> fail to <span class="math inline">\(\varphi\)</span> no matter how hard or how many times she tried, then <strong>she cannot</strong> <span class="math inline">\(\varphi\)</span>.</p>
+</div>
+</div>
+<p>The motivation is clear. I cannot walk on water because I would never walk on water no matter how hard or how many times I tried. This appears to underlie much of our practical deliberation. Whether something is an option for you depends on whether you think you would do (or at least have a reasonable chance of doing it) if you tried.</p>
+<p>Now apply this to Suzy:</p>
+<ol start="4" type="1">
+<li>If Suzy were to try to kill Baby Suzy, she would fail (no matter how hard or how many times she tried.</li>
+</ol>
+<p>So, given the counterfactual principle, it follows:</p>
+<ol start="5" type="1">
+<li>Suzy cannot kill Baby Suzy.</li>
+</ol>
+<p>But the counterfactual principle applies to interpretations of ‘can’ relative to ordinary contexts, which means that by Vihvelin’s lights, premise 2 is true even by ordinary standards.</p>
+<p><span class="citation" data-cites="Vihvelin1996-VIHWTT">(<a href="references.html#ref-Vihvelin1996-VIHWTT" role="doc-biblioref">Vihvelin 1996</a>)</span> rejects the argument from premises 1 and 2 to the impossibility of backward time travel, but her reason is importantly different from Lewis, namely, she takes premise 1 to be false by ordinary standards and premise 1 to be true by ordinary standards of ‘can’.</p>
+<section id="the-fatalist-echo" class="level3" data-number="20.3.1">
+<h3 data-number="20.3.1" class="anchored" data-anchor-id="the-fatalist-echo"><span class="header-section-number">20.3.1</span> The Fatalist Echo</h3>
+<p>What makes Vihvelin’s challenge delicate for our purposes is that the Counterfactual Principle appears to reach well beyond time travel. Consider an action <span class="math inline">\(\varphi\)</span> that I will never undertake, maybe <span class="math inline">\(\varphi\)</span> amounts to writing a book over the summer or maybe completing a sub-3 hour marathon.</p>
+<ol start="6" type="1">
+<li>I will never <span class="math inline">\(\varphi\)</span>.</li>
+<li>If I never <span class="math inline">\(\varphi\)</span>, then I would fail to <span class="math inline">\(\varphi\)</span> no matter how hard or how many times I tried.</li>
+<li>If I would fail to <span class="math inline">\(\varphi\)</span> no matter how hard or how many times I tried, then I cannot <span class="math inline">\(\varphi\)</span>.</li>
+<li>So, I <em>cannot</em> <span class="math inline">\(\varphi\)</span>.</li>
+</ol>
+<p>In other words, I cannot do anything other than what I will in fact do, which seems very close to the fatalist conclusion, and the route we used to reach it seems quite independent from common fatalist arguments.</p>
+<p>Not that <span class="citation" data-cites="Vihvelin1996-VIHWTT">(<a href="references.html#ref-Vihvelin1996-VIHWTT" role="doc-biblioref">Vihvelin 1996</a>)</span> would herself endorse that argument, but we should nonetheless consider the question of how to respond to the challenge.</p>
+</section>
+<section id="similarity-and-counterfactuals" class="level3" data-number="20.3.2">
+<h3 data-number="20.3.2" class="anchored" data-anchor-id="similarity-and-counterfactuals"><span class="header-section-number">20.3.2</span> Similarity and Counterfactuals</h3>
+<p>The key is to look more carefully at how we evaluate counterfactual statements:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Counterfactual Conditionals
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A <em>counterfactual</em> conditional of the form</p>
+<p>if <span class="math inline">\(\varphi\)</span> were the case, then it would be the case that <span class="math inline">\(\psi\)</span></p>
+<p>is true at a world of evaluation <span class="math inline">\(w\)</span> relative to a context <span class="math inline">\(C\)</span> if, and only if,</p>
+<p>all <em>nearby</em> <span class="math inline">\(\varphi\)</span>-worlds are <span class="math inline">\(\psi\)</span>-worlds.</p>
+</div>
+</div>
+<p>Consider the counterfactual:</p>
+<ol start="9" type="1">
+<li>If I tried to write a book over the summer, then I would fail to write a book.</li>
+</ol>
+<p>When we evaluate the counterfactual at the actual world, we consider whether <strong>nearby</strong> worlds at which I try to write a book over the summer are worlds in which I do or I do not. But what exactly are nearby worlds?</p>
+<p>One thought is that nearby worlds are overall more similar to the world of evaluation than more distant worlds. But this concept of relative similarity appears to be quite open-ended, since we have to assign weights to different types of deviation from the world under consideration. On Lewis’ view, for example, comparative similarity is governed by the following set of rules:</p>
+<blockquote class="blockquote">
+<p>1. It is of first importance to avoid big, widespread, diverse violations of law.</p>
+<p>2. It is of second importance to maximize the spatio-temporal region throughout which perfect match of particular fact prevails.</p>
+<p>3. It is of third importance to avoid even small, localized simple violations of law.</p>
+<p>4. It is of little or no importance to secure approximate similarity of particular fact, even in matters that concern us greatly.</p>
+</blockquote>
+<p>On this similarity metric, a world at which I write a book over the summer may count as a nearby world even if it differs from the actual world in that respect. So, we might still be able to judge 9 as false, which would open the door to the claim that I <em>can</em> in fact write a book over the summer.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Inwagen1975-INWTIO" class="csl-entry" role="listitem">
+Inwagen, Peter Van. 1975. <span>“The Incompatibility of Free Will and Determinism.”</span> <em>Philosophical Studies</em> 27 (3): 185–99. <a href="https://doi.org/10.1007/bf01624156">https://doi.org/10.1007/bf01624156</a>.
+</div>
+<div id="ref-Lewis1976-LEWTPO-8" class="csl-entry" role="listitem">
+Lewis, David. 1976. <span>“The Paradoxes of Time Travel.”</span> <em>American Philosophical Quarterly</em> 13 (2): 145–52.
+</div>
+<div id="ref-Vihvelin1996-VIHWTT" class="csl-entry" role="listitem">
+Vihvelin, Kadri. 1996. <span>“What Time Travelers Cannot Do.”</span> <em>Philosophical Studies</em> 81 (2-3): 315–30. <a href="https://doi.org/10.1007/bf00372789">https://doi.org/10.1007/bf00372789</a>.
+</div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -774,8 +1054,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ability.html" class="pagination-link" aria-label="Ability and Counterfactuals">
-        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Ability and Counterfactuals</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./consequence.html" class="pagination-link" aria-label="The Consequence Argument">
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The Consequence Argument</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
